@@ -104,7 +104,7 @@ const removeWithAnon = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store intentory.
+Write a function named createList that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -143,7 +143,22 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  const newArr = [];
+  arr.forEach( num => {
+    if (num % 15 === 0) {
+      newArr.push('Fizz Buzz');
+    }
+    else if (num % 5 === 0) {
+      newArr.push('Buzz');
+    }
+    else if (num % 3 === 0) {
+      newArr.push('Fizz');
+    } else {
+      newArr.push(num);
+    }
+  });
+
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
