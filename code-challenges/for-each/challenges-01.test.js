@@ -79,7 +79,6 @@ const removeWithForEach = (arr, callback) => {
     callback(num, arr)
   })
   return arr;
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
