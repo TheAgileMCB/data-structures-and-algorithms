@@ -114,7 +114,9 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe['steps'].forEach(action => {
+    result.push(action.slice(0, action.indexOf(' ')));
+  })
   return result;
 };
 
@@ -177,7 +179,9 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = (str) => {
-  // Solution code here...
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  let splitStr = str.split('');
+  return splitStr.filter(letter => !vowels.includes(letter)).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -191,7 +195,7 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 ------------------------------------------------------------------------------------------------ */
 
 const extractVowels = (str) => {
-  // Solution code here...
+  var vowels = ['a', 'e', 'o', 'i', 'u'];
 };
 
 /* ------------------------------------------------------------------------------------------------
