@@ -89,7 +89,12 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  for (const person of Object.values(arr)) {
+    if (person.name === character) {
+      return person.children.length > 0;
+    }
+  }
+  return false;
 
 };
 
@@ -102,7 +107,12 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  for (const person of Object.entries(arr) [0]) {
+    if (person.name === character) {
+      return person.children.length > 0;
+    }
+  }
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
