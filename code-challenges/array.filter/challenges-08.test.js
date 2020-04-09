@@ -38,8 +38,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  return arr.filter(value => !
-  forbiddenValues.includes(value));
+  return arr.filter(value => !forbiddenValues.includes(value));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,8 +93,11 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
+  const filteredStatArr = getBaseStatGreaterThan(arr, minBaseStat);
+  return filteredStatArr.map(obj => obj.stat.name)
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -147,7 +149,7 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  return arr.map(characters.children);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -159,7 +161,18 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  // Solution code here...
+
+  let nonNumerics = arr.filter(function(eachInput){
+    return typeof(eachInput) !== 'string';
+  });
+  return nonNumerics.map((evenOdd) => {
+    if (evenOdd % 2 === 0) {
+      return 'even';
+    } else {
+      return 'odd';
+    }
+  });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
