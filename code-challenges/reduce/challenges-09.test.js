@@ -87,7 +87,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  
+  const array = str.split('');
+  const reversedString = array.reduce((acc, val) => {
+    return val + acc
+  }, '')
+  return reversedString;
 };
 
 /* ------------------------------------------------------------------------------------------------
