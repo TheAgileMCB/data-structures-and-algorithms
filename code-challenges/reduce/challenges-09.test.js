@@ -38,7 +38,8 @@ let starWarsData = [{
   skin_color: 'gold',
   eye_color: 'yellow',
   birth_year: '112BBY',
-  gender: 'n/a'},
+  gender: 'n/a'
+},
 {
   name: 'R2-D2',
   height: '96',
@@ -72,9 +73,9 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   const names = starWarsData.reduce((acc, val, idx) => {
-    acc.push (val.name);
+    acc.push(val.name);
     return acc;
-  }, [] );
+  }, []);
   return names;
 };
 
@@ -144,14 +145,14 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  
+
   // const kids = arr.map(arr => arr.children);
   // return kids.reduce(() => {
   //   kids.push(kids.idx + 1)
   //   return kids;
   // }, []);
-  
-  
+
+
   let childCount = arr.reduce((acc, object) => {
     if (object.children) {
       return acc + object.children.length;
@@ -200,7 +201,14 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  let primeNumberCount = arr.reduce((acc, val, idx) => {
+    if (isPrime(val)) {
+      return acc + 1;
+    } else {
+      return acc;
+    }
+  }, 0);
+  return primeNumberCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -278,7 +286,7 @@ describe('Testing challenge 1', () => {
 
 describe('Testing challenge 2', () => {
   test('It should return an array continaing the names of the characters', () => {
-    expect(returnNames(starWarsData)).toStrictEqual([ 'Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa' ]);
+    expect(returnNames(starWarsData)).toStrictEqual(['Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa']);
     expect(returnNames(starWarsData).length).toStrictEqual(5);
   });
 });
@@ -297,7 +305,7 @@ describe('Testing challenge 4', () => {
 
 describe('Testing challenge 5', () => {
   test('It should return the average of the numbers in the array', () => {
-    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
+    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85])).toStrictEqual(64);
   });
 });
 
@@ -315,7 +323,7 @@ describe('Testing challenge 7', () => {
 
 describe('Testing challenge 8', () => {
   test('It should return an array containing the names of the children', () => {
-    expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
+    expect(extractChildren(characters)).toStrictEqual(['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras']);
     expect(extractChildren(characters).length).toStrictEqual(10);
   });
 });
