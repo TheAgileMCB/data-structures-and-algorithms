@@ -144,10 +144,22 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  return characters.reduce((acc, val) => {
-    arr.push(val.children);
-    return arr.length;
-  }, []);
+  
+  // const kids = arr.map(arr => arr.children);
+  // return kids.reduce(() => {
+  //   kids.push(kids.idx + 1)
+  //   return kids;
+  // }, []);
+  
+  
+  let childCount = arr.reduce((acc, object) => {
+    if (object.children) {
+      return acc + object.children.length;
+    } else {
+      return acc;
+    }
+  }, 0);
+  return childCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,9 +170,17 @@ Write a function that, given an array of numbers as input, uses reduce to calcul
 Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
-const calculateAverage = (arr) => {
-  // Solution code here...
-};
+// const calculateAverage = (arr) => {
+//   numObj = {
+//     count: 0,
+//     sum: 0
+//   }
+//   arr.reduce((acc, val, idx) => {
+//   acc + val
+  
+
+  
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
