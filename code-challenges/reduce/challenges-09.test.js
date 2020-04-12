@@ -10,7 +10,7 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   return arr.reduce((acc) => {
-    return acc + 1;
+    return ++acc;
   }, 0);
 };
 
@@ -203,7 +203,7 @@ const isPrime = (value) => {
 const countPrimeNumbers = (arr) => {
   let primeNumberCount = arr.reduce((acc, val, idx) => {
     if (isPrime(val)) {
-      return acc + 1;
+      return ++acc;
     } else {
       return acc;
     }
@@ -271,7 +271,17 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = (arr) => {
-  // Solution code here...
+  let newArr = arr.filter(/[a]/.test(arr));
+
+  let kids = function () {newArr.reduce ((acc, val) => {
+    return acc.concat(val)
+  }, {});
+  }
+  
+  return kids.reduce((acc, val) => {
+    acc.push(val.children);
+    return acc;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
