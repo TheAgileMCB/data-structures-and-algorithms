@@ -37,9 +37,9 @@ const totalSum = (input) => {
   const reducedArr = input.reduce((count, subArr) => {
     const targetCount = subArr.reduce((acc, val) => {
       return acc + val;
-    }, []);
+    }, 0);
     return count + targetCount;
-  }, []);
+  }, 0);
   return reducedArr;
 };
 
@@ -139,9 +139,6 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  // if (data.val == 'male' || data.val =='female') {
-  //   return (val).splice[0]
-  // }
 
   return data.filter((character) => (character.gender === 'male' || character.gender === 'female')).map(character => character.name).join(' and ');
 };
@@ -153,7 +150,13 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  const shortestHeight = data. reduce((current,character) => {
+    if(parseInt(character.height) < current) {
+      current = character.height;
+    }
+    return current;
+  }, 1000);
+  return data.filter(character => character.height === shortestHeight)[0].name;
 };
 
 /* ------------------------------------------------------------------------------------------------
