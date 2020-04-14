@@ -29,7 +29,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
+  return /^[\d\w]+\.?[\d\w]+@[\d\w]+.(net|com|org)$/g.test(email);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
