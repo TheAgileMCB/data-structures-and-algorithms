@@ -77,7 +77,15 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  arr.forEach
+  let treatCount = 0;
+  arr.forEach(store => {
+    store.items.forEach(item => {
+      if(item.name === 'Treats') {
+        treatCount += item.quantity;
+      }
+    });
+  });
+  return treatCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,7 +123,7 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
