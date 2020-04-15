@@ -178,20 +178,35 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => { // This is baffling?
-  let lowestAverage = Infinity;
-  weather.forEach(week => {
-    let weeklyTotal = 0;
-    let dayCount = 0;
-    week.forEach(temp => {
-      weeklyTotal += temp;
-      dayCount++;
-    });
-    let weeklyAverage = weeklyTotal/dayCount;
-    if (weeklyAverage<lowestAverage) {
-      lowestAverage = weeklyAverage;
-    }
-  });
-  return lowestAverage;
+  // get weekly avg
+  function sum(array) {
+    return array.reduce((sum, next) => sum + next, 0);
+  }
+
+  function weeklyAverage(week) {
+    return sum(week) / week.length;
+  }
+
+  // compare avgs
+  return weather
+    .map(weeklyAverage)
+    .reduce((min, next) => next < min ? next : min);
+
+
+  // let lowestAverage = Infinity;
+  // weather.forEach(week => {
+  //   let weeklyTotal = 0;
+  //   let dayCount = 0;
+  //   week.forEach(temp => {
+  //     weeklyTotal += temp;
+  //     dayCount++;
+  //   });
+  //   let weeklyAverage = weeklyTotal/dayCount;
+  //   if (weeklyAverage<lowestAverage) {
+  //     lowestAverage = weeklyAverage;
+  //   }
+  // });
+  // return lowestAverage;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -207,17 +222,32 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  let sums = [];
-  let splitStr = str.split('\n');
-  splitStr.forEach(subStr => {
-    let subArr = subStr.split(',');
-    let sum = 0;
-    subArr.forEach(num => {
-      sum += parseInt(num);
-    });
-    sums.push(sum);
-  });
-  return sums;
+  function sum(array) {
+    return array.reduce((sum, next) => sum + next, 0);
+  }
+
+  let rows = str.split('\n');
+
+  return rows.map(row => {
+    let cols = row.split(',');
+    let colsAsNumbers = cols.map(colString => parseInt(colString));
+    return sum(colsAsNumbers);
+  })
+
+
+
+
+  // let sums = [];
+  // let splitStr = str.split('\n');
+  // splitStr.forEach(subStr => {
+  //   let subArr = subStr.split(',');
+  //   let sum = 0;
+  //   subArr.forEach(num => {
+  //     sum += parseInt(num);
+  //   });
+  //   sums.push(sum);
+  // });
+  // return sums;
 };
 
 /* ------------------------------------------------------------------------------------------------
