@@ -123,7 +123,13 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  return numbers.map((a,b) => a*b).reduce();
+  let acc = 1;
+  numbers.forEach(subArr => {
+    subArr.forEach(val => {
+      acc *= val;
+    });
+  });
+  return acc;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,7 +149,15 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  let totalTemp = 0;
+  let WeekCount = 0;
+  weather.forEach(week => {
+    week.forEach(temp => {
+      totalTemp += temp;
+      WeekCount++;
+    })
+  })
+  return totalTemp/WeekCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
