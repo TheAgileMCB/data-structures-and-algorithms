@@ -47,7 +47,19 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  let newStr = '';
+  for(let i = 1; i < str.length; i += 2) {
+    newStr += str.charAt(i);
+  }
+  return newStr;
+
+  // let arr = str.split('');
+  // arr.map((val, index) => {if (index % 2 === 1) {
+  //   return val;
+  // }
+  // });
+  // return arr.join('');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,7 +69,9 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  return arr.every(str => {
+    return str.includes(':)')
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,7 +81,9 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
+  return arr.filter(str => str.includes(target)
+  );
+
 };
 
 /* ------------------------------------------------------------------------------------------------
