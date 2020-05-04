@@ -1,6 +1,11 @@
 # data-structures-and-algorithms
 a repository for DeltaV 301 and 401 code challenges
 
+### Table of Contents
+#### 301
+#### 401
+- [Challenge 1 (Reverse Array)] (https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/Program.cs)
+
 ## challenges301
 
 
