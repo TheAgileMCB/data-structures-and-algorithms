@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mcb4r\\OneDrive\\Desktop\\github\\code-401\\data-structures-and-algorithms\\challenges\\challenges\\challenges.csproj": {}
+    "C:\\Users\\mcb4r\\OneDrive\\Desktop\\github\\code-401\\data-structures-and-algorithms\\Challenges401\\Challenges.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mcb4r\\OneDrive\\Desktop\\github\\code-401\\data-structures-and-algorithms\\challenges\\challenges\\challenges.csproj": {
+    "C:\\Users\\mcb4r\\OneDrive\\Desktop\\github\\code-401\\data-structures-and-algorithms\\Challenges401\\Challenges.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mcb4r\\OneDrive\\Desktop\\github\\code-401\\data-structures-and-algorithms\\challenges\\challenges\\challenges.csproj",
-        "projectName": "challenges",
-        "projectPath": "C:\\Users\\mcb4r\\OneDrive\\Desktop\\github\\code-401\\data-structures-and-algorithms\\challenges\\challenges\\challenges.csproj",
+        "projectUniqueName": "C:\\Users\\mcb4r\\OneDrive\\Desktop\\github\\code-401\\data-structures-and-algorithms\\Challenges401\\Challenges.csproj",
+        "projectName": "Challenges",
+        "projectPath": "C:\\Users\\mcb4r\\OneDrive\\Desktop\\github\\code-401\\data-structures-and-algorithms\\Challenges401\\Challenges.csproj",
         "packagesPath": "C:\\Users\\mcb4r\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mcb4r\\OneDrive\\Desktop\\github\\code-401\\data-structures-and-algorithms\\challenges\\challenges\\obj\\",
+        "outputPath": "C:\\Users\\mcb4r\\OneDrive\\Desktop\\github\\code-401\\data-structures-and-algorithms\\Challenges401\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
