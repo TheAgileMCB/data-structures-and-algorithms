@@ -10,6 +10,13 @@ namespace Challenges
         {
 
         }
-
+        
+        public static decimal middleIndex(decimal arrLength)
+        {
+            decimal newArrLength = Math.Round(arrLength / 2, 0,
+                MidpointRounding.AwayFromZero);
+            return newArrLength;
+        }
     }
+
 }
