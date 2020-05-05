@@ -4,7 +4,12 @@ using System.Text;
 
 namespace Challenges
 {
-    class Class1
+    public class ArrayShift
     {
+        public static int[] insertShiftArray(int[] array, int num)
+        {
+
+        }
+
     }
 }
