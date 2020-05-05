@@ -119,6 +119,10 @@ typings/
 # Serverless directories
 .serverless
 
+# VisualStudio
+.vs
+.suo
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
