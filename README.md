@@ -4,7 +4,10 @@ a repository for DeltaV 301 and 401 code challenges
 ### Table of Contents
 #### 301
 #### 401
-- [Challenge 1 (Reverse Array)] (https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/Program.cs)
+- [Challenge 1 (Reverse Array)](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/Program.cs)
+- [Challenge 2 (Insert and Shift Array)](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/ArrayShift.cs) 
+
+#
 
 ## challenges301
 
@@ -28,3 +31,23 @@ Example
 
 #### Solution
 ![Challenge1ReverseArray](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/assets/Challenge1ReverseArray.jpg)
+
+#
+
+#### 20200504
+### Reverse Array
+
+#### Challenge
+Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
+
+#### Input	Output
+
+[2,4,6,8], 5	[2,4,5,6,8]
+[4,8,15,23,42], 16	[4,8,15,16,23,42]
+
+#### Approach and Efficiency
+- Our apporach has an O(n) time and space complexity.
+
+#### Solution
+![Challenge2ShiftArray](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/assets/Challenge2ShiftArray.png)
+
