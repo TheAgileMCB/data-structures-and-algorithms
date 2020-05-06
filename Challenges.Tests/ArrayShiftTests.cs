@@ -6,16 +6,17 @@ namespace Challenges.Tests
     public class ArrayShiftTests
     {
         [Theory]
-        [InlineData(new[] { 7, 67, 1 }, 54, new[] { 7, 67, 54, 1 })]
-        [InlineData(new[] { 7, 67, 1, 8 }, 54, new[] { 7, 67, 54, 1, 8 })]
+        [InlineData(1, new int[0], new[] { 1 })]
+        [InlineData(54, new[] { 7, 67, 1 }, new[] { 7, 67, 54, 1 })]
+        [InlineData(54, new[] { 7, 67, 1, 8 }, new[] { 7, 67, 54, 1, 8 })]
 
-        public void Can_shift_odd_length_array(int[] input, num, int[] expected)
+        public void Can_shift_array(int value, int[] input, int[] expected)
         {
             // Arrange
-            // from input
+            // from data
 
             // Act
-            int[] result = ArrayShift.insertShiftArray(input, num);
+            int[] result = ArrayShift.insertShiftArray(input, value);
 
             // Assert
             Assert.Equal(expected, result);
