@@ -31,7 +31,7 @@ Example
 - We used a for loop because it felt logical and most resembled material we were comfortable with from learning JavaScript. Our apporach has an O(n) time complexity.
 
 #### Solution
-![Challenge1ReverseArray](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/assets/Challenge1ReverseArray.jpg)
+![Challenge1ReverseArray](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/assets/Challenge1ReverseArray.jpg)
 
 #
 
