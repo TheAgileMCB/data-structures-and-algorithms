@@ -10,7 +10,14 @@ namespace Challenges.Tests
         [InlineData(54, new[] { 1, 3, 6, 54 }, 3)]
         [InlineData(54, new[] { 7, 9, 10, 80 }, -1)]
         [InlineData(8, new[] { 7, 8, 9, 14, 22, 45, 67, 90, 100, 111 }, 1)]
-
+        [InlineData(1, new[] { 1, 3, 5, 7 }, 0)]
+        [InlineData(2, new[] { 1, 3, 5, 7 }, -1)]
+        [InlineData(3, new[] { 1, 3, 5, 7 }, 1)]
+        [InlineData(4, new[] { 1, 3, 5, 7 }, -1)]
+        [InlineData(5, new[] { 1, 3, 5, 7 }, 2)]
+        [InlineData(6, new[] { 1, 3, 5, 7 }, -1)]
+        [InlineData(7, new[] { 1, 3, 5, 7 }, 3)]
+        [InlineData(8, new[] { 1, 3, 5, 7 }, -1)]
         public void Can_binary_search(int key, int[] input, int expected)
         {
             // Arrange
