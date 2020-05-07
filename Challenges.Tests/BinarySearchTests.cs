@@ -22,5 +22,81 @@ namespace Challenges.Tests
             // Assert
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void Can_binary_search_100()
+        {
+            // Arrange
+            int[] input = new int[100];
+            for(int i = 1; i < input.Length; i++)
+            {
+                input[i-1] = i;
+            }
+
+            int key = 65;
+            int expected = 64;
+            // Act
+            int result = ArrayMethods.BinarySearch(key, input);
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Can_binary_search_1000()
+        {
+            // Arrange
+            int[] input = new int[1000];
+            for (int i = 1; i < input.Length; i++)
+            {
+                input[i-1] = i;
+            }
+
+            int key = 1;
+            int expected = 0;
+            // Act
+            int result = ArrayMethods.BinarySearch(key, input);
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Can_binary_search_10000()
+        {
+            // Arrange
+            int[] input = new int[10000];
+            for (int i = 1; i < input.Length; i++)
+            {
+                input[i-1] = i;
+            }
+
+            int key = 678;
+            int expected = 677;
+            // Act
+            int result = ArrayMethods.BinarySearch(key, input);
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Can_binary_search_100000()
+        {
+            // Arrange
+            int[] input = new int[100000];
+            for (int i = 1; i < input.Length; i++)
+            {
+                input[i-1] = i;
+            }
+
+            int key = 200000;
+            int expected = -1;
+            // Act
+            int result = ArrayMethods.BinarySearch(key, input);
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
     }
 }
