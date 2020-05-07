@@ -6,7 +6,7 @@ a repository for DeltaV 301 and 401 code challenges
 #### 401
 - [Challenge 1 (Reverse Array)](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/Program.cs)
 - [Challenge 2 (Insert and Shift Array)](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/ArrayShift.cs) 
-- [Challenge 3 (Binary Search)]()
+- [Challenge 3 (Binary Search)](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/ArrayMethods.cs)
 
 #
 
