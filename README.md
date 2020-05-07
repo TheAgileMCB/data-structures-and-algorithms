@@ -66,9 +66,9 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 [11,22,33,44,55,66,77], 90	-1
 
 #### Approach and Efficiency
-- 
+- The binary search is a notorious O log(n) function!
 
 #### Solution
-![Challenge3BinarySearch]()
+![Challenge3BinarySearch](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/assets/Challenge3BinarySearch.png)
 
 
