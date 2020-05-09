@@ -7,14 +7,27 @@ namespace DataStructures.Tests
     public class LinkedListTests
     {
         [Fact]
-        public void New_list_is_empty()
+        public void New_list_shows_null()
         {
-            string value = "";               
+            // Act
+            LinkedList list = new LinkedList();
 
-            LinkedList list = new LinkedList(value);
-
-            Assert.Equal("", list.ToString());
+            // Assert
+            Assert.Equal("NULL", list.ToString());
         }
-       
+
+        [Fact]
+        public void Can_add_to_list()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+
+            // Act
+            list.Insert(1);
+
+            //Assert
+            Assert.Equal("{1} -> ", list.ToString());
+        }
+
     }
 }

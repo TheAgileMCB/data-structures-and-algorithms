@@ -6,32 +6,34 @@ namespace DataStructures
     {
         private Node head;
 
-        public Node ListHead()
-        {
-            head = null;
-            return head;
-        }
+        //public void MyList()
+        //{
+        //    head = null;
+        //}
 
         public void Insert(int value)
         {
-            if (head == null)
-            {
+            //if (head == null)
+            //{
             this.head = new Node(value);
-            }
-            else
-            {
-                Node temp = new Node(value);
-                temp.Next = head;
-                head = temp;
-            }
+            //}
+            //else
+            //{
+            //    Node temp = new Node(value);
+            //    temp.Next = head;
+            //    head = temp;
+            //}
         }
 
-        public void ToString()
+        public override string ToString()
         {
+            //Console.Write("{" + head.Value + "} -> ");
             if (head != null)
             {
-                head.ToString();
+                return "{" + $"{head.Value.ToString()}" + "} -> ";
             }
+            else
+                return "NULL";
         }
 
         public class Node
@@ -46,4 +48,6 @@ namespace DataStructures
             public Node Next { get; set; }
         }
     }
+
+
 }
