@@ -1,14 +1,20 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace DataStructures.Tests
 {
-    public class UnitTest1
+    public class LinkedListTests
     {
         [Fact]
-        public void Test1()
+        public void New_list_is_empty()
         {
+            string value = "";               
 
+            LinkedList list = new LinkedList(value);
+
+            Assert.Equal("", list.ToString());
         }
+       
     }
 }
