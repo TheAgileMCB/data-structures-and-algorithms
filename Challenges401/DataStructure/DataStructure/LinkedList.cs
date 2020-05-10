@@ -25,8 +25,16 @@ namespace DataStructures
 
 
 
-        public bool Includes()
+        public bool Includes(int value)
         {
+            current = head;
+            while ((current != null) && (current.Value != value))
+            {
+                current = current.Next;
+            }
+            if (current != null) return true;
+
+            else return false;
 
         }
 
