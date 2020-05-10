@@ -9,17 +9,23 @@ namespace DataStructures
 
         public void Insert(int value)
         {
-            // this.head = new Node(value);
-
-            Node tempNode = new Node(value);
-
-            if (head != null)
+            try
             {
-                tempNode.Next = this.head;
-            }
+                Node tempNode = new Node(value);
 
-            head = tempNode;
-            current = tempNode;
+                if (head != null)
+                {
+                    tempNode.Next = head;
+                }
+
+                head = tempNode;
+                current = tempNode;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
 
         }
 
@@ -27,31 +33,49 @@ namespace DataStructures
 
         public bool Includes(int value)
         {
-            current = head;
-            while ((current != null) && (current.Value != value))
+            try
             {
-                current = current.Next;
-            }
-            if (current != null) return true;
+                current = head;
+                while ((current != null) && (current.Value != value))
+                {
+                    current = current.Next;
+                }
+                if (current != null) return true;
 
-            else return false;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+                return false;
+            }
 
         }
 
         public override string ToString()
         {
-            string linkedListOutput = "";
-
-            if (head != null)
+            try
             {
-                linkedListOutput += $"{{{current.Value}}}";
-                while (current.Next != null)
+                string linkedListOutput = "";
+
+                if (head != null)
                 {
-                    current = current.Next;
-                    linkedListOutput += $" -> {{{current.Value}}}";
+                    linkedListOutput += $"{{{current.Value}}}";
+                    while (current.Next != null)
+                    {
+                        current = current.Next;
+                        linkedListOutput += $" -> {{{current.Value}}}";
+                    }
                 }
+                return linkedListOutput + " -> NULL";
             }
-            return linkedListOutput + " -> NULL";
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+                return "Sorry, something went wrong.";
+            }
 
         }
 
