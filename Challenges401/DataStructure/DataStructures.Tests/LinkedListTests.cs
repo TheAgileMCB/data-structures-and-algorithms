@@ -59,18 +59,19 @@ namespace DataStructures.Tests
             Assert.Equal("{4} -> {1} -> {5} -> NULL", list.ToString());
         }
 
-        //[Fact]
-        //public void Can_return_true()
-        // {
-        //     // Arrange
-        //     LinkedList list = new LinkedList();
+        [Fact]
+        public void Can_return_true()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            int value = 1;
 
-        //     // Act
+            // Act
+            list.Insert(value);
 
-
-        //     //Assert
-        //     Assert.True();
-        // }
+            //Assert
+            Assert.True(list.Includes(value));
+        }
 
     }
 }

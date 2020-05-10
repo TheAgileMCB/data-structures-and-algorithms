@@ -25,10 +25,10 @@ namespace DataStructures
 
 
 
-        //public bool Includes()
-        //{
+        public bool Includes()
+        {
 
-        //}
+        }
 
         public override string ToString()
         {
