@@ -5,43 +5,54 @@ namespace DataStructures
     public class LinkedList
     {
         private Node head;
-
-        //public void MyList()
-        //{
-        //    head = null;
-        //}
+        private Node current;
 
         public void Insert(int value)
         {
-            //if (head == null)
-            //{
-            this.head = new Node(value);
-            //}
-            //else
-            //{
-            //    Node temp = new Node(value);
-            //    temp.Next = head;
-            //    head = temp;
-            //}
+            // this.head = new Node(value);
+
+            Node tempNode = new Node(value);
+
+            if (head != null)
+            {
+                tempNode.Next = this.head;
+            }
+
+            head = tempNode;
+            current = tempNode;
+
         }
+
+
+
+        //public bool Includes()
+        //{
+
+        //}
 
         public override string ToString()
         {
-            //Console.Write("{" + head.Value + "} -> ");
+            string linkedListOutput = "";
+
             if (head != null)
             {
-                return "{" + $"{head.Value.ToString()}" + "} -> ";
+                linkedListOutput += $"{{{current.Value}}}";
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                    linkedListOutput += $" -> {{{current.Value}}}";
+                }
             }
-            else
-                return "NULL";
+            return linkedListOutput + " -> NULL";
+
         }
 
         public class Node
         {
             public Node(int value)
             {
-                this.Value = value;
-                this.Next = null;
+                Value = value;
+                Next = null;
             }
 
             public int Value { get; set; }

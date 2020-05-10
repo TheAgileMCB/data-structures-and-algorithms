@@ -26,8 +26,51 @@ namespace DataStructures.Tests
             list.Insert(1);
 
             //Assert
-            Assert.Equal("{1} -> ", list.ToString());
+            Assert.Equal("{1} -> NULL", list.ToString());
         }
+
+        [Fact]
+        public void Can_add_2_to_list()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+
+            // Act
+            list.Insert(1);
+            list.Insert(4);
+
+            //Assert
+            Assert.Equal("{4} -> {1} -> NULL", list.ToString());
+        }
+
+        [Fact]
+        public void Can_add_3_to_list()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+
+            // Act
+            list.Insert(1);
+            list.Insert(4);
+            list.Insert(5);
+
+
+            //Assert
+            Assert.Equal("{4} -> {1} -> {5} -> NULL", list.ToString());
+        }
+
+        //[Fact]
+        //public void Can_return_true()
+        // {
+        //     // Arrange
+        //     LinkedList list = new LinkedList();
+
+        //     // Act
+
+
+        //     //Assert
+        //     Assert.True();
+        // }
 
     }
 }
