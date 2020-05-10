@@ -56,7 +56,7 @@ namespace DataStructures.Tests
 
 
             //Assert
-            Assert.Equal("{4} -> {1} -> {5} -> NULL", list.ToString());
+            Assert.Equal("{5} -> {4} -> {1} -> NULL", list.ToString());
         }
 
         [Fact]
@@ -71,6 +71,20 @@ namespace DataStructures.Tests
 
             //Assert
             Assert.True(list.Includes(value));
+        }
+
+        [Fact]
+        public void Can_return_false()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            int value = 1;
+
+            // Act
+            list.Insert(value);
+
+            //Assert
+            Assert.False(list.Includes(777));
         }
 
     }
