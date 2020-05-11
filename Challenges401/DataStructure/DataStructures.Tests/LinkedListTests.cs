@@ -87,5 +87,22 @@ namespace DataStructures.Tests
             Assert.False(list.Includes(777));
         }
 
+        [Fact]
+        public void Can_add_to_end()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(1);
+            list.Insert(4);
+            list.Insert(5);
+
+            // Act
+            list.Append(9);
+
+
+            //Assert
+            Assert.Equal("{5} -> {4} -> {1} -> {9} -> NULL", list.ToString());
+        }
+
     }
 }
