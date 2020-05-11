@@ -92,6 +92,22 @@ namespace DataStructures
             }
 
         }
+
+        public void Append(int value)
+        {
+            Node current = head;
+            Node newNode = new Node(value);
+
+            if (current.Next == null)
+            {
+                newNode.Next = head;
+                current.Next = newNode;
+            }
+           
+                current = current.Next;
+               
+        }
+
         /// <summary>
         /// Establishes the node class, getting and setting both an int value and the Node next
         /// </summary>
