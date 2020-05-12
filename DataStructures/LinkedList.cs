@@ -126,7 +126,6 @@ namespace DataStructures
             }
             else
             {
-                newNode.Next = null;
                 Node current = head;
 
                 while (current.Next.Value != insertBeforeMe)

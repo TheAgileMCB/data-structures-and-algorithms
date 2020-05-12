@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Xunit;
 
 namespace DataStructures.Tests
@@ -109,7 +107,7 @@ namespace DataStructures.Tests
         {
             // Arrange
             LinkedList list = new LinkedList();
-            
+
 
             // Act
             list.Append(9);
