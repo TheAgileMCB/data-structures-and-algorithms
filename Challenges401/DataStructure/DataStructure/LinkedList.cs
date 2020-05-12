@@ -134,7 +134,10 @@ namespace DataStructures
                     current = current.Next;
                 }
 
+                newNode.Next = current.Next;
                 current.Next = newNode;
+                //newNode.Next = head;
+
             }
         }
 
