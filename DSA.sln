@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenges", "Challenges401\Challenges.csproj", "{D460E31E-C838-4A82-85DF-C86623C23BED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenges.Tests", "Challenges.Tests\Challenges.Tests.csproj", "{80C1ABDC-E131-4035-9984-348ADC5746E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenges.Tests", "Challenges.Tests\Challenges.Tests.csproj", "{80C1ABDC-E131-4035-9984-348ADC5746E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures", "DataStructures\DataStructures.csproj", "{E754DF60-3CB2-407D-B5E1-D55BF67AAC76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures.Tests", "DataStructures.Tests\DataStructures.Tests.csproj", "{82F5261E-6277-4267-8AD4-7A240DC4C95E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{80C1ABDC-E131-4035-9984-348ADC5746E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80C1ABDC-E131-4035-9984-348ADC5746E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80C1ABDC-E131-4035-9984-348ADC5746E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E754DF60-3CB2-407D-B5E1-D55BF67AAC76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E754DF60-3CB2-407D-B5E1-D55BF67AAC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E754DF60-3CB2-407D-B5E1-D55BF67AAC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E754DF60-3CB2-407D-B5E1-D55BF67AAC76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82F5261E-6277-4267-8AD4-7A240DC4C95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82F5261E-6277-4267-8AD4-7A240DC4C95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82F5261E-6277-4267-8AD4-7A240DC4C95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82F5261E-6277-4267-8AD4-7A240DC4C95E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
