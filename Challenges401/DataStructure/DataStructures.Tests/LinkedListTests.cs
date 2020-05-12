@@ -152,6 +152,22 @@ namespace DataStructures.Tests
         //}
 
         [Fact]
+        public void Can_insert_before_first_item()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(3);
+            list.Append(5);
+            list.Append(9);
+
+            // Act
+            list.insertBefore(88, 3);
+
+
+            //Assert
+            Assert.Equal("{88} -> {3} -> {5} -> {9} -> NULL", list.ToString());
+        }
+
         public void Can_insert_after()
         {
             // Arrange
@@ -161,7 +177,7 @@ namespace DataStructures.Tests
             list.Append(9);
 
             // Act
-            list.insertAfter(88, 5);
+            list.insertAfter(88, 3);
 
 
             //Assert
