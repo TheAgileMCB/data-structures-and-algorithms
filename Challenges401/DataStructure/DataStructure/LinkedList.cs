@@ -140,6 +140,28 @@ namespace DataStructures
             }
         }
 
+        public void insertAfter(int value, int insertAfterMe)
+        {
+            Node newNode = new Node(value);
+
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                newNode.Next = null;
+                Node current = head;
+
+                while (current.Value != insertAfterMe)
+                {
+                    current = current.Next;
+                }
+                newNode.Next = current.Next;
+                current.Next = newNode;
+            }
+        }
+
         /// <summary>
         /// Establishes the node class, getting and setting both an int value and the Node next
         /// </summary>
