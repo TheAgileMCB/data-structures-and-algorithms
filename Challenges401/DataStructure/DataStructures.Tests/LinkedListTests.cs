@@ -104,5 +104,35 @@ namespace DataStructures.Tests
             Assert.Equal("{5} -> {4} -> {1} -> {9} -> NULL", list.ToString());
         }
 
+        [Fact]
+        public void Can_add_to_end_of_empty_list()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            
+
+            // Act
+            list.Append(9);
+
+
+            //Assert
+            Assert.Equal("{9} -> NULL", list.ToString());
+        }
+
+        [Fact]
+        public void Can_insert_in_middle()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+
+
+            // Act
+            list.Append(9);
+            list.Append(5);
+
+
+            //Assert
+            Assert.Equal("{9} -> NULL", list.ToString());
+        }
     }
 }

@@ -95,17 +95,26 @@ namespace DataStructures
 
         public void Append(int value)
         {
-            Node current = head;
+           // Node current = head;
             Node newNode = new Node(value);
 
-            if (current.Next == null)
+            if (head == null)
             {
-                newNode.Next = head;
+                head = newNode;
+            }
+            else
+            {
+                newNode.Next = null;
+
+                Node current = head;
+
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+
                 current.Next = newNode;
             }
-           
-                current = current.Next;
-               
         }
 
         /// <summary>
