@@ -1,9 +1,0 @@
-C:\Users\mcb4r\OneDrive\Desktop\github\code-401\data-structures-and-algorithms\Challenges401\DataStructure\DataStructure\obj\Debug\netstandard2.0\DataStructures.csprojAssemblyReference.cache
-C:\Users\mcb4r\OneDrive\Desktop\github\code-401\data-structures-and-algorithms\Challenges401\DataStructure\DataStructure\obj\Debug\netstandard2.0\DataStructures.csproj.CoreCompileInputs.cache
-C:\Users\mcb4r\OneDrive\Desktop\github\code-401\data-structures-and-algorithms\Challenges401\DataStructure\DataStructure\obj\Debug\netstandard2.0\DataStructures.AssemblyInfoInputs.cache
-C:\Users\mcb4r\OneDrive\Desktop\github\code-401\data-structures-and-algorithms\Challenges401\DataStructure\DataStructure\obj\Debug\netstandard2.0\DataStructures.AssemblyInfo.cs
-C:\Users\mcb4r\OneDrive\Desktop\github\code-401\data-structures-and-algorithms\Challenges401\DataStructure\DataStructure\bin\Debug\netstandard2.0\DataStructures.deps.json
-C:\Users\mcb4r\OneDrive\Desktop\github\code-401\data-structures-and-algorithms\Challenges401\DataStructure\DataStructure\bin\Debug\netstandard2.0\DataStructures.dll
-C:\Users\mcb4r\OneDrive\Desktop\github\code-401\data-structures-and-algorithms\Challenges401\DataStructure\DataStructure\bin\Debug\netstandard2.0\DataStructures.pdb
-C:\Users\mcb4r\OneDrive\Desktop\github\code-401\data-structures-and-algorithms\Challenges401\DataStructure\DataStructure\obj\Debug\netstandard2.0\DataStructures.dll
-C:\Users\mcb4r\OneDrive\Desktop\github\code-401\data-structures-and-algorithms\Challenges401\DataStructure\DataStructure\obj\Debug\netstandard2.0\DataStructures.pdb
