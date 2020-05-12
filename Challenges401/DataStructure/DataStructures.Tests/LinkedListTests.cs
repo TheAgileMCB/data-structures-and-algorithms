@@ -136,6 +136,22 @@ namespace DataStructures.Tests
         }
 
         //[Fact]
+        //public void Can_return_null_if_insertBeforeMe_Does_not_exist()
+        //{
+        //    // Arrange
+        //    LinkedList list = new LinkedList();
+        //    list.Insert(5);
+           
+
+        //    // Act
+        //    list.insertBefore(45, 9);
+
+
+        //    //Assert
+        //    Assert.Equal("NULL", list.ToString());
+        //}
+
+        //[Fact]
         //public void Can_insert_after()
         //{
         //    // Arrange
