@@ -123,6 +123,7 @@ namespace DataStructures
             if (head == null)
             {
                 head = newNode;
+                // throw new ArgumentException("Value not found to insert before");
             }
             else if (head.Value == insertBeforeMe)
             {
