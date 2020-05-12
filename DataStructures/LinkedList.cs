@@ -6,25 +6,23 @@ namespace DataStructures
     {
         // establishes to head and current nodes for traversing to list
         private Node head;
-        private Node current;
 
         public void Insert(int value)
         {
             try
             {
                 // assigns the new node to a temporary holding node
-                Node tempNode = new Node(value);
+                Node newNode = new Node(value);
 
                 // checks that the list head exists
                 if (head != null)
                 {
                     // if it does, sets the temp node to point at the current head
-                    tempNode.Next = head;
+                    newNode.Next = head;
                 }
 
                 // sets the value of the temp node to the head
-                head = tempNode;
-                current = tempNode;
+                head = newNode;
             }
             catch (Exception ex)
             {
@@ -41,7 +39,7 @@ namespace DataStructures
             try
             {
                 // assigns the head to the current ndoe
-                current = head;
+                Node current = head;
                 //traverses the nodes, verifying that the nodes have content and that they are not the desired value
                 while ((current != null) && (current.Value != value))
                 {
@@ -68,23 +66,23 @@ namespace DataStructures
         {
             try
             {
+                Node current = head;
                 // establish an empty string
-                string linkedListOutput = "";
+                string result = "";
 
-                // perform the actions if the nead node has data
-                if (head != null)
+                // add the current value of the node the string until the next node returns null
+
+                while (current != null)
                 {
-                    // add the current value of the node the string until the next node returns null
-                    linkedListOutput += $"{{{current.Value}}}";
-                    while (current.Next != null)
-                    {
-                        // adds the subsequent values to the string
-                        current = current.Next;
-                        linkedListOutput += $" -> {{{current.Value}}}";
-                    }
+                    // adds the subsequent values to the string
+                    result += $"{{{current.Value}}} -> ";
+
+                    // traverse
+                    current = current.Next;
                 }
+
                 // returns the string and concatenates the final null value
-                return linkedListOutput + " -> NULL";
+                return result + "NULL";
             }
             catch (Exception ex)
             {
@@ -94,6 +92,76 @@ namespace DataStructures
             }
 
         }
+
+        public void Append(int value)
+        {
+            Node newNode = new Node(value);
+
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                newNode.Next = null;
+
+                Node current = head;
+
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+
+                current.Next = newNode;
+            }
+        }
+
+        public void insertBefore(int value, int insertBeforeMe)
+        {
+            Node newNode = new Node(value);
+
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                newNode.Next = null;
+                Node current = head;
+
+                while (current.Next.Value != insertBeforeMe)
+                {
+                    current = current.Next;
+                }
+
+                newNode.Next = current.Next;
+                current.Next = newNode;
+
+            }
+        }
+
+        public void insertAfter(int value, int insertAfterMe)
+        {
+            Node newNode = new Node(value);
+
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                newNode.Next = null;
+                Node current = head;
+
+                while (current.Value != insertAfterMe)
+                {
+                    current = current.Next;
+                }
+                newNode.Next = current.Next;
+                current.Next = newNode;
+            }
+        }
+
         /// <summary>
         /// Establishes the node class, getting and setting both an int value and the Node next
         /// </summary>
