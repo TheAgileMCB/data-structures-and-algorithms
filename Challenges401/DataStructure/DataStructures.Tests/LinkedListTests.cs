@@ -120,19 +120,36 @@ namespace DataStructures.Tests
         }
 
         [Fact]
-        public void Can_insert_in_middle()
+        public void Can_insert_before()
         {
             // Arrange
             LinkedList list = new LinkedList();
-
+            list.Insert(5);
+            list.Append(9);
 
             // Act
-            list.Append(9);
-            list.Append(5);
+            insertBefore(45, 9);
 
 
             //Assert
-            Assert.Equal("{9} -> NULL", list.ToString());
+            Assert.Equal("{5} -> {45} -> {9} -> NULL", list.ToString());
+        }
+
+        [Fact]
+        public void Can_insert_after()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(3);
+            list.Append(5);
+            list.Append(9);
+
+            // Act
+            list.insertAfter(88, 5);
+
+
+            //Assert
+            Assert.Equal("{3} -> {5} -> {88} -> {9} -> NULL", list.ToString());
         }
     }
 }
