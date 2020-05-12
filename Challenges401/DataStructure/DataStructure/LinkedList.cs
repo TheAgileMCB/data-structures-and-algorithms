@@ -95,7 +95,6 @@ namespace DataStructures
 
         public void Append(int value)
         {
-           // Node current = head;
             Node newNode = new Node(value);
 
             if (head == null)
@@ -109,6 +108,28 @@ namespace DataStructures
                 Node current = head;
 
                 while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+
+                current.Next = newNode;
+            }
+        }
+
+        public void insertBefore(int value, int insertBeforeMe)
+        {
+            Node newNode = new Node(value);
+
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                newNode.Next = null;
+                Node current = head;
+
+                while (current.Next.Value != insertBeforeMe)
                 {
                     current = current.Next;
                 }
