@@ -124,6 +124,11 @@ namespace DataStructures
             {
                 head = newNode;
             }
+            else if (head.Value == insertBeforeMe)
+            {
+                newNode.Next = head;
+                head = newNode;
+            }
             else
             {
                 Node current = head;
