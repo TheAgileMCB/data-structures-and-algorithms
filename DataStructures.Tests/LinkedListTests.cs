@@ -1,3 +1,4 @@
+using System;
 using Xunit;
 
 namespace DataStructures.Tests
@@ -133,21 +134,23 @@ namespace DataStructures.Tests
             Assert.Equal("{5} -> {45} -> {9} -> NULL", list.ToString());
         }
 
-        //[Fact]
-        //public void Can_return_null_if_insertBeforeMe_Does_not_exist()
-        //{
-        //    // Arrange
-        //    LinkedList list = new LinkedList();
-        //    list.Insert(5);
+        [Fact]
+        public void Can_throw_if_insertBeforeMe_Does_not_exist()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(5);
 
+            //Assert
+            Assert.Throws<ArgumentException>(() =>
+            {
+                // Act
+                list.insertBefore(45, 9);
+            });
 
-        //    // Act
-        //    list.insertBefore(45, 9);
-
-
-        //    //Assert
-        //    Assert.Equal("NULL", list.ToString());
-        //}
+            //Assert
+            Assert.Equal("{5} -> NULL", list.ToString());
+        }
 
         [Fact]
         public void Can_insert_before_first_item()

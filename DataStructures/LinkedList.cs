@@ -140,6 +140,11 @@ namespace DataStructures
                     current = current.Next;
                 }
 
+                if (current.Next == null || current.Next.Value != insertBeforeMe)
+                {
+                    throw new ArgumentException("Value not found.");
+                }
+
                 newNode.Next = current.Next;
                 current.Next = newNode;
 
