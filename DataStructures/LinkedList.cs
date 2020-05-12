@@ -133,7 +133,8 @@ namespace DataStructures
             {
                 Node current = head;
 
-                while (current.Next.Value != insertBeforeMe)
+                while (current.Next != null &&
+                    current.Next.Value != insertBeforeMe)
                 {
                     current = current.Next;
                 }
