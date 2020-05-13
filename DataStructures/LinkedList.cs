@@ -172,6 +172,45 @@ namespace DataStructures
             }
         }
 
+        public int Search(int value, int negativeIndex)
+        {
+            int length = 0;
+            Node current = head;
+
+            if(head == null)
+            {
+                throw Exception;
+            }
+
+            while (current != null)
+            {
+                current = current.Next;
+                    length++;
+            }
+
+            int position = length - negativeIndex;
+
+            if(length < negativeIndex)
+            {
+                throw Exception;
+            }
+
+            current = head;
+
+            if (length == negativeIndex)
+            {
+                return current.Value;
+            }
+            else
+            {
+                for(int i = 0; i < position; i++)
+                {
+                    current = current.Next;
+                }
+                return current.Value;
+            }
+        }
+
         /// <summary>
         /// Establishes the node class, getting and setting both an int value and the Node next
         /// </summary>
