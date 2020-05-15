@@ -1,3 +1,4 @@
+![.NET Core](https://github.com/mcbarnhart/data-structures-and-algorithms/workflows/.NET%20Core/badge.svg)
 # data-structures-and-algorithms
 a repository for DeltaV 301 and 401 code challenges
 
@@ -72,9 +73,6 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 ![Challenge3BinarySearch](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/Challenges401/assets/Challenge3BinarySearch.png)
 
 #
-
-## Badges
-![.NET Core](https://github.com/mcbarnhart/data-structures-and-algorithms/workflows/.NET%20Core/badge.svg)
 
 ## Lincense
 This information is licensed under the [MIT License](https://github.com/mcbarnhart/data-structures-and-algorithms/blob/master/LICENSE).
