@@ -127,7 +127,7 @@ namespace DataStructures.Tests
             list.Append(9);
 
             // Act
-            list.insertBefore(45, 9);
+            list.InsertBefore(45, 9);
 
 
             //Assert
@@ -145,7 +145,7 @@ namespace DataStructures.Tests
             Assert.Throws<ArgumentException>(() =>
             {
                 // Act
-                list.insertBefore(45, 9);
+                list.InsertBefore(45, 9);
             });
 
             //Assert
@@ -162,7 +162,7 @@ namespace DataStructures.Tests
             list.Append(9);
 
             // Act
-            list.insertBefore(88, 3);
+            list.InsertBefore(88, 3);
 
 
             //Assert

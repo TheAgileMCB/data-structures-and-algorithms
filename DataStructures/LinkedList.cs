@@ -116,7 +116,7 @@ namespace DataStructures
             }
         }
 
-        public void insertBefore(int value, int insertBeforeMe)
+        public void InsertBefore(int value, int insertBeforeMe)
         {
             Node newNode = new Node(value);
 
