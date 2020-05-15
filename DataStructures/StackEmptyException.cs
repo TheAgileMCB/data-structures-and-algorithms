@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace DataStructures
 {
     [Serializable]
-    internal class StackEmptyException : Exception
+    public class StackEmptyException : Exception
     {
         public StackEmptyException()
         {
