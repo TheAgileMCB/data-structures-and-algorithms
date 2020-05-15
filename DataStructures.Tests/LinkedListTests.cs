@@ -182,7 +182,7 @@ namespace DataStructures.Tests
             list.Append(9);
 
             // Act
-            list.insertAfter(value, insertAfterMe);
+            list.InsertAfter(value, insertAfterMe);
 
 
             //Assert

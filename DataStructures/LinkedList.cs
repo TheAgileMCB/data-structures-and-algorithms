@@ -150,7 +150,7 @@ namespace DataStructures
             }
         }
 
-        public void insertAfter(int value, int insertAfterMe)
+        public void InsertAfter(int value, int insertAfterMe)
         {
             Node newNode = new Node(value);
 
