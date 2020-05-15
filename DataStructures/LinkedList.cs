@@ -179,7 +179,7 @@ namespace DataStructures
 
             if(head == null)
             {
-                throw Exception;
+                throw new Exception("Nothing is here!");
             }
 
             while (current != null)
@@ -192,7 +192,7 @@ namespace DataStructures
 
             if(length < negativeIndex)
             {
-                throw Exception;
+                throw new Exception("The value searched is too big.");
             }
 
             current = head;

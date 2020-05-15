@@ -169,6 +169,7 @@ namespace DataStructures.Tests
             Assert.Equal("{88} -> {3} -> {5} -> {9} -> NULL", list.ToString());
         }
 
+        [Fact]
         public void Can_insert_after()
         {
             // Arrange
@@ -178,7 +179,7 @@ namespace DataStructures.Tests
             list.Append(9);
 
             // Act
-            list.insertAfter(88, 3);
+            list.insertAfter(88, 5);
 
 
             //Assert
