@@ -1,5 +1,4 @@
 ![.NET Core](https://github.com/mcbarnhart/data-structures-and-algorithms/workflows/.NET%20Core/badge.svg)
-#
 # data-structures-and-algorithms
 a repository for DeltaV 301 and 401 code challenges
 
