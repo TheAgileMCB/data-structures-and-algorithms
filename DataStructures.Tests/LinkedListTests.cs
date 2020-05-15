@@ -169,8 +169,11 @@ namespace DataStructures.Tests
             Assert.Equal("{88} -> {3} -> {5} -> {9} -> NULL", list.ToString());
         }
 
-        [Fact]
-        public void Can_insert_after()
+        [Theory]
+        [InlineData (88, 5, "{3} -> {5} -> {88} -> {9} -> NULL")]
+        [InlineData(88, 9, "{3} -> {5} -> {9} -> {88} -> NULL")]
+
+        public void Can_insert_after(int value, int insertAfterMe, string expected)
         {
             // Arrange
             LinkedList list = new LinkedList();
@@ -179,11 +182,11 @@ namespace DataStructures.Tests
             list.Append(9);
 
             // Act
-            list.insertAfter(88, 5);
+            list.insertAfter(value, insertAfterMe);
 
 
             //Assert
-            Assert.Equal("{3} -> {5} -> {88} -> {9} -> NULL", list.ToString());
+            Assert.Equal(expected, list.ToString());
         }
     }
 }
