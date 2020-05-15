@@ -8,6 +8,8 @@ namespace DataStructures
     {
         public StackEmptyException()
         {
+            string message = "There's nothing here!";
+            Console.WriteLine(message);
         }
 
         public StackEmptyException(string message) : base(message)
