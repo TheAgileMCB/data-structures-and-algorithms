@@ -6,7 +6,7 @@ namespace DataStructures
 {
     public class Stack<T>
     {
-        private Node top;
+        public Node top;
 
         public void Push(T value) { }
 
@@ -14,15 +14,23 @@ namespace DataStructures
 
         public T Peek()
         {
-            if (top == null) throw new StackEmptyException();
 
-            return default;
+            if (top == null) 
+                throw new StackEmptyException();
+            else
+                return top.Value;
         }
 
-        private class Node
+        public class Node
         {
-            Node Next { get; set; }
-            T Value { get; set; }
+            public Node(T value)
+            {
+                Value = value;
+                Next = null;
+            }
+
+            public Node Next { get; set; }
+            public T Value { get; set; }
         }
     }
 }
