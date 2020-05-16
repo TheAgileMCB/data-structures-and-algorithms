@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DataStructures.Tests
 {
@@ -19,6 +20,22 @@ namespace DataStructures.Tests
                 // Act
                 stack.Peek();
             });
+        }
+
+        [Fact]
+        public void I_can_has_push()
+        {
+            // Arrange
+            Stack<object> stack = new Stack<object>();
+            int expected = 5;
+
+            // Act
+            Stack<object> test = stack.Push(5);
+            int actual = test.Value;
+
+            //Assert
+            Assert.Equal(expected, actual);
+
         }
     }
 }
