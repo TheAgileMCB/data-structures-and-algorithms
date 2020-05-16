@@ -18,6 +18,7 @@ namespace DataStructures
                 newNode.Next = top;
 
             }
+
             top = newNode;
         }
 

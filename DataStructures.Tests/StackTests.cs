@@ -23,7 +23,7 @@ namespace DataStructures.Tests
         }
 
         [Fact]
-        public void I_can_has_push()
+        public void I_can_haz_push()
         {
             // Arrange
             Stack<object> stack = new Stack<object>();
