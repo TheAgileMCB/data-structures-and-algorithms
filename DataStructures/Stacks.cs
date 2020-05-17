@@ -8,7 +8,7 @@ namespace DataStructures
     {
         private Node top;
 
-        public void Push(T value)
+        public T Push(T value)
         {
             Node newNode = new Node(value);
 
@@ -20,6 +20,7 @@ namespace DataStructures
             }
 
             top = newNode;
+            return top.Value;
         }
 
 

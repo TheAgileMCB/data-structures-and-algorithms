@@ -23,18 +23,18 @@ namespace DataStructures.Tests
         }
 
         [Fact]
-        public void I_can_haz_push()
+        public void I_can_has_push()
         {
             // Arrange
-            Stack<object> stack = new Stack<object>();
-            int expected = 5;
+            Stack<int> stack = new Stack<int>();
+            int expected = 4;
 
             // Act
-            Stack<object> test = stack.Push(5);
-            int actual = test.Value;
+           int test = stack.Push(5);
+         
 
             //Assert
-            Assert.Equal(expected, actual);
+            Assert.Equal(expected, test);
 
         }
     }
