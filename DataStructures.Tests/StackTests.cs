@@ -27,7 +27,7 @@ namespace DataStructures.Tests
         {
             // Arrange
             Stack<int> stack = new Stack<int>();
-            int expected = 4;
+            int expected = 5;
 
             // Act
            int test = stack.Push(5);
