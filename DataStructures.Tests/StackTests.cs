@@ -30,15 +30,15 @@ namespace DataStructures.Tests
             int expected = 5;
 
             // Act
-            int actual = stack.Push(5);
+            stack.Push(5);
 
 
             //Assert
-            Assert.Equal(expected, actual);
+            Assert.Equal(expected, stack.Peek());
 
         }
 
-        [Fact(Skip = "not sure what's happening here")]
+        [Fact]
         public void I_can_has_many_push()
         {
             // Arrange
@@ -49,11 +49,14 @@ namespace DataStructures.Tests
             newStack.Push(5);
             newStack.Push(9);
             newStack.Push(3);
+            newStack.Push(100);
 
             // Assert
-            Assert.Contains(3, newStack);
-            Assert.Contains(5, newStack);
-            Assert.Contains(9, newStack);
+            Assert.Equal(4, newStack.count);
+            Assert.Equal(100, newStack.Peek());
+
+
+
 
         }
 
