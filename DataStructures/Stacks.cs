@@ -1,26 +1,23 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DataStructures
 {
-    public class Stack<T>
+    public class Stack<T> : IEnumerable<T>
     {
-        private Node top;
+        private Node top { get; set; }
+        public T[] items;
+        public int count;
 
-        public T Push(T value)
+        public void Push(T value)
         {
-            Node newNode = new Node(value);
-
-            if (top != null)
-            {
-
-                newNode.Next = top;
-
-            }
-
+            Node newNode = new Node(value) { Next = top };
+           
             top = newNode;
-            return top.Value;
+            count++;
+            
         }
 
 
@@ -33,6 +30,20 @@ namespace DataStructures
                 throw new StackEmptyException();
             else
                 return top.Value;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < count; i++)
+            {
+                yield return items[i];
+            }
+        }
+
+        // Non-generic, just do this because we have to
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
 
         public class Node
