@@ -27,23 +27,23 @@ namespace DataStructures.Tests
         {
             // Arrange
             Stack<int> stack = new Stack<int>();
-          
+            int expected = 5;
 
             // Act
-          //stack.Push(5);
+            int actual = stack.Push(5);
 
 
             //Assert
-            Assert.NotNull(stack);
+            Assert.Equal(expected, actual);
 
         }
 
-        [Fact (Skip = "not sure what's happening here")]
+        [Fact(Skip = "not sure what's happening here")]
         public void I_can_has_many_push()
         {
             // Arrange
             Stack<int> newStack = new Stack<int>();
-        
+
 
             // Act
             newStack.Push(5);
