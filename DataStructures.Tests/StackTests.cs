@@ -68,7 +68,7 @@ namespace DataStructures.Tests
             string actual = newStack.Peek();
 
             // Assert
-            Assert.Equal("Pikchu", actual);
+            Assert.Equal("Pikachu", actual);
         }
     }
 }
