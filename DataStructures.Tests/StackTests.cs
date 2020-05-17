@@ -55,9 +55,6 @@ namespace DataStructures.Tests
             Assert.Equal(4, newStack.count);
             Assert.Equal(100, newStack.Peek());
 
-
-
-
         }
 
         [Fact]
@@ -65,6 +62,7 @@ namespace DataStructures.Tests
         {
             // Arrange
             Stack<string> newStack = new Stack<string>();
+            newStack.Push("Charmander");
             newStack.Push("Pikachu");
 
             // Act
