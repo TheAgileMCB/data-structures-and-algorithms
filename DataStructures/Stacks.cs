@@ -14,19 +14,29 @@ namespace DataStructures
         public void Push(T value)
         {
             Node newNode = new Node(value) { Next = top };
-           
+
             top = newNode;
             count++;
-            
+
         }
 
+        public T Pop()
+        {
+            if (top == null)
+                throw new StackEmptyException();
+            else
+            {
+                top = Next;
 
-            public T Pop() { return default; }
+                count--;
+                return newNode.Value;
+            }
+        }
 
         public T Peek()
         {
 
-            if (top == null) 
+            if (top == null)
                 throw new StackEmptyException();
             else
                 return top.Value;
