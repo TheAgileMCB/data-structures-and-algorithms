@@ -116,7 +116,7 @@ namespace DataStructures
             }
         }
 
-        public void insertBefore(int value, int insertBeforeMe)
+        public void InsertBefore(int value, int insertBeforeMe)
         {
             Node newNode = new Node(value);
 
@@ -150,7 +150,7 @@ namespace DataStructures
             }
         }
 
-        public void insertAfter(int value, int insertAfterMe)
+        public void InsertAfter(int value, int insertAfterMe)
         {
             Node newNode = new Node(value);
 
@@ -179,7 +179,7 @@ namespace DataStructures
 
             if(head == null)
             {
-                throw Exception;
+                throw new Exception("Nothing is here!");
             }
 
             while (current != null)
@@ -192,7 +192,7 @@ namespace DataStructures
 
             if(length < negativeIndex)
             {
-                throw Exception;
+                throw new Exception("The value searched is too big.");
             }
 
             current = head;
