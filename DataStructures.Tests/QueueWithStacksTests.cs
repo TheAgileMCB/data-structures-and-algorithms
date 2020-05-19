@@ -9,7 +9,7 @@ namespace DataStructures.Tests
     public class QueueWithStackTests
     {
         [Fact]
-        public void Peek_empty_stack_throws()
+        public void Pop_from_one_stack_to_push_to_another()
         {
             // Arrange
             Stack<int> stack1 = new Stack<int>();
