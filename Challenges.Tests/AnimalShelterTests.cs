@@ -11,12 +11,13 @@ namespace Challenges.Tests
         public void Can_enqueue()
         {
             // Arrange
-            AnimalShelter shelter = new AnimalShelter();
+            Shelter shelter = new Shelter();
             // Act
-            shelter.Enqueue(Dog);
+            shelter.QueueAnimal(new Node(Animal.Dog));
+            var expected = shelter.All.Tail.Value;
 
             // Assert
-            Assert.Contains(Dog, shelter);
+            Assert.Contains("Dog", expected.ToString());
         }
 
         [Fact (Skip ="not ready yet")]
