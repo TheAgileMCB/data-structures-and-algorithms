@@ -20,10 +20,18 @@ namespace Challenges.Tests
             Assert.Contains("Dog", expected.ToString());
         }
 
-        [Fact (Skip ="not ready yet")]
+        [Fact]
         public void Can_dequeue()
         {
+            // Arrange
+            Shelter shelter = new Shelter();
+            shelter.QueueAnimal(new Node(Animal.Dog));
 
+            // Act
+            var expected = shelter.Dequeue(Dog);
+
+            // Assert
+            Assert.Equal("Dog", expected);
         }
 
     }
