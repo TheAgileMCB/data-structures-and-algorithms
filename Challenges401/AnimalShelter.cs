@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataStructures
+namespace Challenges
 {
-    class QueueWithStacks
+    public class AnimalShelter
     {
-
     }
 }

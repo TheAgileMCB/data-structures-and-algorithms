@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataStructures.Tests
+namespace Challenges
 {
-    class Class1
+    class QueueWithStacks
     {
+
     }
 }
