@@ -9,12 +9,26 @@ namespace Challenges
     {
         public Queue Dogs { get; set; }
         public Queue Cats { get; set; }
-        //public Queue Dogs { get; set; }
+        public Queue All { get; set; }
         public Shelter()
         {
             Dogs = new Queue();
             Cats = new Queue();
-            
+            All = new Queue();
+        }
+
+        public void QueueAnimal(Node animal)
+        {
+            All.Enqueue(animal);
+
+            if (animal.Value == Animal.Cat)
+            {
+                Cats.Enqueue(animal);
+            }
+            else
+            {
+                Dogs.Enqueue(animal);
+            }
         }
 
     }
