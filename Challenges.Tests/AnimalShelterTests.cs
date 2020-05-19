@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace DataStructures.Tests
+namespace Challenges.Tests
 {
     public class AnimalShelterTests
     {
