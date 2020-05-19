@@ -26,9 +26,11 @@ namespace DataStructures
                 throw new StackEmptyException();
             else
             {
-                top = Next;
+                Node newNode = top;
+                top = top.Next;
+                newNode.Next = null;
 
-                count--;
+                
                 return newNode.Value;
             }
         }
