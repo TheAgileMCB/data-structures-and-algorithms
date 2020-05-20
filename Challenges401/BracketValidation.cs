@@ -17,7 +17,7 @@ namespace Challenges
                 { '{', '}'},
                 { '(', ')'},
                 { '<', '>'},
-                { '[', ']'},
+                { '[', ']'}
              };
 
             Stack<char> brackets = new Stack<char>();
@@ -34,7 +34,7 @@ namespace Challenges
 
                         if (bracketPairs.Values.Contains(item))
                     {
-                        if (item == brackets.First())
+                        if (item == bracketPairs[brackets.First()])
                         {
                             brackets.Pop();
                         }
