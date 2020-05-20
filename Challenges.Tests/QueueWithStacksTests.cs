@@ -4,7 +4,7 @@ using System.Text;
 using Xunit;
 using Xunit.Sdk;
 
-namespace DataStructures.Tests
+namespace Challenges.Tests
 {
     public class QueueWithStackTests
     {
