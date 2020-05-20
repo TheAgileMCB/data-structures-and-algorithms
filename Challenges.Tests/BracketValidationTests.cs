@@ -22,7 +22,7 @@ namespace Challenges.Tests
         }
 
         [Fact]
-        public void I_can_has_push()
+        public void I_can_push_bracket()
         {
             // Arrange
             Stack<char> brackets = new Stack<char>();
@@ -38,7 +38,7 @@ namespace Challenges.Tests
         }
 
         [Fact]
-        public void I_can_has_many_push()
+        public void I_can_push_many_brackets()
         {
             // Arrange
             Stack<char> brackets = new Stack<char>();
