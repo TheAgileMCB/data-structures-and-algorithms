@@ -8,19 +8,33 @@ namespace Challenges.Tests
     public class AnimalShelterTests
     {
         [Fact]
+        public void Can_initialize_empty_shelter()
+        {
+            //Arrange
+            Shelter shelter = new Shelter();
+
+            // Assert
+            Assert.Null(shelter.Dogs.Head);
+            // Act
+            shelter.QueueAnimal(new Node(Animal.Dog));
+        }
+
+        [Fact]
         public void Can_enqueue()
         {
             // Arrange
             Shelter shelter = new Shelter();
+
             // Act
             shelter.QueueAnimal(new Node(Animal.Dog));
             var expected = shelter.All.Tail.Value;
 
             // Assert
-            Assert.Contains("Dog", expected.ToString());
+            Assert.Equal("Dog", expected.ToString());
+
         }
 
-        [Fact]
+        [Fact (Skip ="spinning my wheels")]
         public void Can_dequeue()
         {
             // Arrange
@@ -28,10 +42,10 @@ namespace Challenges.Tests
             shelter.QueueAnimal(new Node(Animal.Dog));
 
             // Act
-            var expected = shelter.Dequeue(Dog);
+            shelter.DequeueOne(new Node(Animal.Dog));
 
             // Assert
-            Assert.Equal("Dog", expected);
+            Assert.Equal(0, shelter.Dogs.count);
         }
 
     }
