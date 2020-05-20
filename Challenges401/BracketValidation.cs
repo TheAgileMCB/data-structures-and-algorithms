@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-//using DataStructures;
+// using DataStructures;
+
+// Thanks to TarunSingla; Reference material: https://www.codeproject.com/Tips/1175562/Check-for-Balanced-Parenthesis-in-a-String
 
 namespace Challenges
 {
@@ -43,10 +45,11 @@ namespace Challenges
                         {
                             return false;
                         }
-
+                    }
+                    else
+                    {
                         continue;
                     }
-
                 }
             }
             catch 
@@ -55,9 +58,13 @@ namespace Challenges
                 return false;
             }
 
-            if (brackets.Count == 0)
+            if (brackets.Count() == 0)
             {
                 return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
