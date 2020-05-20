@@ -31,13 +31,41 @@ namespace Challenges
             }
         }
 
+        public void DequeueOne (Node item)
+        {
+            var animal = All.Dequeue();
+
+            if (animal.Value == Animal.Cat)
+            {
+                Cats.DequeueOne(animal);
+            }
+            else
+            {
+                Dogs.DequeueOne(animal);
+            }
+        }
+
+        public void DequeueDog()
+        {
+            var dogNoMore = Dogs.Dequeue();
+
+            All.DequeueOne(dogNoMore);
+        }
+
+        public void DequeueCat()
+        {
+            var catNoMore = Cats.Dequeue();
+
+            All.DequeueOne(catNoMore);
+        }
+
     }
 
     public class Queue
     {
         Node head = null;
         Node tail = null;
-        int count = 0;
+        public int count = 0;
 
         public Node Head
         {
@@ -68,6 +96,63 @@ namespace Challenges
 
             tail = newNode;
             count++;
+        }
+
+        public Node DequeueOne(Node item)
+        {
+            Node current = head;
+            Node previous = null;
+
+            Node dequeued = null;
+
+            while (current != null)
+            {
+                Node next = current.Next;
+
+                if(current == item) 
+                {
+                    dequeued = current;
+
+                    if (previous == null)
+                    {
+                        head = next;
+                        //current = null;
+                        break;
+                    }
+                    else
+                    {
+                        current = next;
+                        previous.Next = current;
+
+                        if (current.Next == null)
+                        {
+                            tail = current;
+                        }
+                    }
+
+                    count--;
+                }
+
+                previous = current;
+                current = current.Next;
+            }
+
+            return dequeued;
+        }
+
+        public Node Dequeue()
+        {
+            Node dequeued = null;
+            Node current = head;
+
+            if (count > 0)
+            {
+                dequeued = head;
+                head = head.Next;
+                count--;
+            }
+
+            return dequeued;
         }
     }
     
