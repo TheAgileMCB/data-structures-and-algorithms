@@ -77,12 +77,12 @@ namespace Challenges.Tests
         [Theory]
         [InlineData("<({})>", true)]
         [InlineData("<({)>", false)]
-        [InlineData("<(weeeee{})>", true)]
+        [InlineData("()[[codefellows]]", true)]
         [InlineData("<})>", false)]
         [InlineData(">", false)]
-        [InlineData("(", true)]
+        [InlineData("(", false)]
         [InlineData("<yuu({wee}woo)>", true)]
-        [InlineData("<({[", true)]
+        [InlineData("<({[", false)]
 
         public void I_can_validate_brackets(string input, bool expected)
         {
