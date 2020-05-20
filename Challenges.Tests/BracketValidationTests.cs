@@ -21,38 +21,38 @@ namespace Challenges.Tests
             });
         }
 
-        [Fact(Skip = "pulled from StackTests")]
+        [Fact]
         public void I_can_has_push()
         {
             // Arrange
             Stack<char> brackets = new Stack<char>();
-            char expected = };
+            char expected = '{';
 
         // Act
-        stack.Push(});
+        brackets.Push('{');
 
 
             //Assert
-            Assert.Equal(expected, stack.Peek());
+            Assert.Equal(expected, brackets.Peek());
 
         }
 
-        [Fact(Skip = "pulled from StackTests")]
+        [Fact]
         public void I_can_has_many_push()
         {
             // Arrange
-            Stack<char> newStack = new Stack<char>();
+            Stack<char> brackets = new Stack<char>();
 
 
             // Act
-            newStack.Push(});
-            newStack.Push());
-            newStack.Push(>);
-            newStack.Push(>);
+            brackets.Push('{');
+            brackets.Push('(');
+            brackets.Push('<');
+            brackets.Push('<');
 
             // Assert
-            Assert.Equal(4, newStack.count);
-            Assert.Equal(100, newStack.Peek());
+            Assert.Equal(4, brackets.count);
+            Assert.Equal('{', brackets.Peek());
 
         }
     }
