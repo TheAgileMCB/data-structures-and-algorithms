@@ -71,7 +71,7 @@ namespace Challenges.Tests
             brackets.Pop();
 
             // Assert
-            Assert.Equal('<', brackets.Peek());
+            Assert.Equal('(', brackets.Peek());
         }
     }
 }
