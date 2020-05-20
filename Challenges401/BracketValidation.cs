@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Challenges
 {
-    class BracketValidation
+    public class BracketValidation
     {
         public static bool IsBalanced(string input)
         {
