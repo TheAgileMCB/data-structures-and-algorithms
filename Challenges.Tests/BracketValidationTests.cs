@@ -52,7 +52,7 @@ namespace Challenges.Tests
 
             // Assert
             Assert.Equal(4, brackets.count);
-            Assert.Equal('{', brackets.Peek());
+            Assert.Equal('<', brackets.Peek());
 
         }
     }
