@@ -15,6 +15,10 @@ namespace Challenges.Tests
 
             // Assert
             Assert.Null(shelter.Dogs.Head);
+            Assert.Null(shelter.Dogs.Tail);
+            Assert.Null(shelter.Cats.Head);
+            Assert.Null(shelter.Dogs.Tail);
+
             // Act
             shelter.QueueAnimal(new Node(Animal.Dog));
         }
