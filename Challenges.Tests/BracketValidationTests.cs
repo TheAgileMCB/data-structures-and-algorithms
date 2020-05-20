@@ -28,8 +28,8 @@ namespace Challenges.Tests
             Stack<char> brackets = new Stack<char>();
             char expected = '{';
 
-        // Act
-        brackets.Push('{');
+            // Act
+            brackets.Push('{');
 
 
             //Assert
@@ -54,6 +54,24 @@ namespace Challenges.Tests
             Assert.Equal(4, brackets.count);
             Assert.Equal('<', brackets.Peek());
 
+        }
+
+        [Fact]
+        public void I_can_pop_a_bracket()
+        {
+            // Arrange
+            Stack<char> brackets = new Stack<char>();
+            brackets.Push('{');
+            brackets.Push('(');
+            brackets.Push('<');
+            brackets.Push('<');
+
+            // Act
+            brackets.Pop();
+            brackets.Pop();
+
+            // Assert
+            Assert.Equal('<', brackets.Peek());
         }
     }
 }
