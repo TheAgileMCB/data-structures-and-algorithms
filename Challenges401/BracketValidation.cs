@@ -29,43 +29,33 @@ namespace Challenges
                     if (bracketPairs.Keys.Contains(item))
                     {
                         brackets.Push(item);
-
-                        if (bracketPairs.Values.Contains(item))
-                        {
-                            if (item == brackets.First())
-                            {
-                                brackets.Pop();
-                            }
-                            else
-                            {
-                                return false;
-                            }
-                        }
-                        else
-                        {
-                            return false;
-                        }
                     }
                     else
+
+                        if (bracketPairs.Values.Contains(item))
                     {
-                        continue;
+                        if (item == brackets.First())
+                        {
+                            brackets.Pop();
+                        }
+                        else
+                        
+                            return false;
+                        
                     }
+                    else
+                    
+                        continue;
+                    
                 }
             }
-            catch 
+            catch
             {
 
                 return false;
             }
 
-            if (brackets.Count() == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return brackets.Count() == 0 ? true : false;
         }
 
     }
