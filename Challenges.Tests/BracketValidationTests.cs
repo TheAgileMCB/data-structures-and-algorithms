@@ -73,5 +73,29 @@ namespace Challenges.Tests
             // Assert
             Assert.Equal('(', brackets.Peek());
         }
+
+        [Theory]
+        [InlineData("<({})>", true)]
+        [InlineData("<({)>", false)]
+        [InlineData("<(weeeee{})>", true)]
+        [InlineData("<})>", false)]
+        [InlineData(">", false)]
+        [InlineData("(", true)]
+        [InlineData("<yuu({wee}woo)>", true)]
+        [InlineData("<({[", true)]
+
+        public void I_can_validate_brackets(string input, bool expected)
+        {
+            // Arrange
+            // from data
+
+            // Act
+            bool actual = BracketValidation.IsBalanced(input);
+
+            //Assert
+
+            Assert.Equal(expected, actual);
+
+        }
     }
 }
