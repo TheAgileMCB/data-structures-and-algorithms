@@ -10,7 +10,7 @@ namespace Challenges
 {
     public class BracketValidation
     {
-        public static bool IsBalanced(string input)
+        public static bool MultiBracketValidation(string input)
         {
             Dictionary<char, char> bracketPairs = new Dictionary<char, char>()
             {

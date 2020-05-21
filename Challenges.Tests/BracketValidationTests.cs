@@ -90,7 +90,7 @@ namespace Challenges.Tests
             // from data
 
             // Act
-            bool actual = BracketValidation.IsBalanced(input);
+            bool actual = BracketValidation.MultiBracketValidation(input);
 
             //Assert
 
