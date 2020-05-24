@@ -65,7 +65,7 @@ namespace DataStructures.Tests
         public void Can_preorder_traverse()
         {
             // Arrange
-            Tree<int> testTree = new Tree<int>();
+            BinarySearchTree<int> testTree = new BinarySearchTree<int>();
             testTree.Add(5);
             testTree.Add(9);
             testTree.Add(1);
@@ -74,6 +74,27 @@ namespace DataStructures.Tests
 
             // Act
            IEnumerable<int> actual =  testTree.PreOrder(testTree.ReturnRoot());
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Can_preorder_big_traverse()
+        {
+            // Arrange
+            BinarySearchTree<int> testTree = new BinarySearchTree<int>();
+            testTree.Add(5);
+            testTree.Add(9);
+            testTree.Add(1);
+            testTree.Add(8);
+            testTree.Add(12);
+            testTree.Add(2);
+            IEnumerable<int> expected = new int[] { 5, 1, 2, 9, 8, 12 };
+
+
+            // Act
+            IEnumerable<int> actual = testTree.PreOrder(testTree.ReturnRoot());
 
             // Assert
             Assert.Equal(expected, actual);
