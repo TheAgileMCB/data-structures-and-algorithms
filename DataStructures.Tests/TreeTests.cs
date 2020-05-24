@@ -69,11 +69,11 @@ namespace DataStructures.Tests
             testTree.Add(5);
             testTree.Add(9);
             testTree.Add(1);
-            IEnumerable<int> expected = new int[] { 5, 1, 9 }; 
+            IEnumerable<int> expected = new int[] { 5, 1, 9 };
 
 
             // Act
-           IEnumerable<int> actual =  testTree.PreOrder(testTree.ReturnRoot());
+            IEnumerable<int> actual = testTree.PreOrder(testTree.ReturnRoot());
 
             // Assert
             Assert.Equal(expected, actual);
@@ -112,6 +112,27 @@ namespace DataStructures.Tests
             testTree.Add(12);
             testTree.Add(2);
             IEnumerable<int> expected = new int[] { 1, 2, 5, 7, 9, 12 };
+
+
+            // Act
+            IEnumerable<int> actual = testTree.InOrder(testTree.ReturnRoot());
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Can_postorder_big_traverse()
+        {
+            // Arrange
+            BinarySearchTree<int> testTree = new BinarySearchTree<int>();
+            testTree.Add(5);
+            testTree.Add(7);
+            testTree.Add(9);
+            testTree.Add(1);
+            testTree.Add(12);
+            testTree.Add(2);
+            IEnumerable<int> expected = new int[] { 1, 2, 12, 9, 7,  5 };
 
 
             // Act
