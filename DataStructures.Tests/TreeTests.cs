@@ -106,12 +106,12 @@ namespace DataStructures.Tests
             // Arrange
             BinarySearchTree<int> testTree = new BinarySearchTree<int>();
             testTree.Add(5);
+            testTree.Add(7);
             testTree.Add(9);
             testTree.Add(1);
-            testTree.Add(8);
             testTree.Add(12);
             testTree.Add(2);
-            IEnumerable<int> expected = new int[] { 1, 2, 5, 8, 9, 12 };
+            IEnumerable<int> expected = new int[] { 1, 2, 5, 7, 9, 12 };
 
 
             // Act
