@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataStructures.Binary_Trees
 {
-    class BinarySearchTree<T> where
+    public class BinarySearchTree<T> where
         T : IComparable<T>
     {
         public Node Root;
@@ -53,5 +53,10 @@ namespace DataStructures.Binary_Trees
                 }
             }
         }
+
+        //public bool Contains(T nodeToBeSearched)
+        //{
+
+        //}
     }
 }
