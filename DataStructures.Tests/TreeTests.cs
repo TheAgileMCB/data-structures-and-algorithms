@@ -37,5 +37,28 @@ namespace DataStructures.Tests
             Assert.Equal(expected, testTree.Root.Value);
 
         }
+
+        [Fact]
+        public void Can_add_three_node()
+        {
+            // Arrange
+            BinarySearchTree<int> testTree = new BinarySearchTree<int>();
+            int root = 5;
+            int left = 1;
+            int right = 9;
+
+
+            // Act
+            testTree.Add(5);
+            testTree.Add(8);
+            testTree.Add(1);
+
+
+            // Assert
+            Assert.Equal(root, testTree.Root.Value);
+            Assert.Equal(left, testTree.Root.Left.Value);
+            Assert.Equal(right, testTree.Root.Right.Value);
+
+        }
     }
 }
