@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DataStructures.BinaryTrees
 {
-    public class BinaryTree<T> : BinarySearchTree<T> where
+    public class Tree<T> : BinarySearchTree<T> where
         T : IComparable<T>
     {
         //public Node Root;
@@ -19,6 +19,7 @@ namespace DataStructures.BinaryTrees
         //{
         //    return Root;
         //}
+
 
         public IEnumerable<T> PreOrder(Node Root)
         {
