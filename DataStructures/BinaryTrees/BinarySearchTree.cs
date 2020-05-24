@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataStructures.Binary_Trees
+namespace DataStructures.BinaryTrees
 {
-    public class BinarySearchTree<T> where
+    public class BinarySearchTree<T>  where
         T : IComparable<T>
     {
         public Node Root;
@@ -32,7 +32,7 @@ namespace DataStructures.Binary_Trees
                 while (true)
                 {
                     parent = current;
-                    if (nodeToBeAdded.CompareTo < current.Value)
+                    if (nodeToBeAdded.CompareTo(current.Value) < 0)
                     {
                         current = current.Left;
                         if (current == null)
@@ -54,9 +54,12 @@ namespace DataStructures.Binary_Trees
             }
         }
 
-        //public bool Contains(T nodeToBeSearched)
-        //{
-
-        //}
+        public class Node
+        {
+            public T Value { get; set; }
+            public Node Root { get; set; }
+            public Node Left { get; set; }
+            public Node Right { get; set; }
+        }
     }
 }

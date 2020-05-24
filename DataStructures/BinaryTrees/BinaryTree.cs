@@ -4,21 +4,21 @@ using System.ComponentModel.Design.Serialization;
 using System.Dynamic;
 using System.Text;
 
-namespace DataStructures.Binary_Trees
+namespace DataStructures.BinaryTrees
 {
-    public class BinaryTree<T> where
+    public class BinaryTree<T> : BinarySearchTree<T> where
         T : IComparable<T>
     {
-        public Node Root;
-        public BinaryTree()
-        {
-            Root = null;
-        }
+        //public Node Root;
+        //public BinaryTree()
+        //{
+        //    Root = null;
+        //}
 
-        public Node ReturnRoot()
-        {
-            return Root;
-        }
+        //public Node ReturnRoot()
+        //{
+        //    return Root;
+        //}
 
         public IEnumerable<T> PreOrder(Node Root)
         {
