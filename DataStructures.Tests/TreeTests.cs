@@ -8,17 +8,17 @@ namespace DataStructures.Tests
 {
     public class TreeTests
     {
-        [Fact (Skip = "how to assert a tree is empty?")]
+        [Fact]
         public void Can_make_empty()
         {
             // Arrange
             BinarySearchTree<int> testTree = new BinarySearchTree<int>();
 
-            // Act
-
-
             // Assert
+            Assert.Null(testTree.Root);
 
+            // Act
+            testTree.Add(5);
 
         }
 
@@ -65,7 +65,7 @@ namespace DataStructures.Tests
         public void Can_preorder_traverse()
         {
             // Arrange
-            BinaryTree<int> testTree = new BinaryTree<int>();
+            Tree<int> testTree = new Tree<int>();
             testTree.Add(5);
             testTree.Add(9);
             testTree.Add(1);
@@ -73,7 +73,7 @@ namespace DataStructures.Tests
 
 
             // Act
-           IEnumerable<int> actual = (int[])testTree.PreOrder(testTree.ReturnRoot());
+           IEnumerable<int> actual =  testTree.PreOrder(testTree.ReturnRoot());
 
             // Assert
             Assert.Equal(expected, actual);
