@@ -132,11 +132,11 @@ namespace DataStructures.Tests
             testTree.Add(1);
             testTree.Add(12);
             testTree.Add(2);
-            IEnumerable<int> expected = new int[] { 1, 2, 12, 9, 7,  5 };
+            IEnumerable<int> expected = new int[] { 2, 1, 12, 9, 7, 5 };
 
 
             // Act
-            IEnumerable<int> actual = testTree.InOrder(testTree.ReturnRoot());
+            IEnumerable<int> actual = testTree.PostOrder(testTree.ReturnRoot());
 
             // Assert
             Assert.Equal(expected, actual);
