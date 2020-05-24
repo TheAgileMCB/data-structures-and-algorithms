@@ -6,29 +6,33 @@ using System.Text;
 
 namespace DataStructures.BinaryTrees
 {
-    public class Tree<T> : BinarySearchTree<T> where
+    public class Tree<T> where
         T : IComparable<T>
     {
-        //public Node Root;
-        //public BinaryTree()
-        //{
-        //    Root = null;
-        //}
-
-        //public Node ReturnRoot()
-        //{
-        //    return Root;
-        //}
-
-
-        public IEnumerable<T> PreOrder(Node Root)
+        public Node Root;
+        public Tree()
         {
-            if (Root != null)
-            {
-                yield return Root.Value;
-                PreOrder(Root.Left);
-                PreOrder(Root.Right);
-            }
+            Root = null;
+        }
+
+        public Node ReturnRoot()
+        {
+            return Root;
+        }
+
+        public IEnumerable<T> PreOrder(Node root)
+        {
+            if (root == null)
+                yield break;
+
+
+                yield return root.Value;
+            foreach (T item in PreOrder(root.Left))
+                yield return item;
+
+                foreach(T item in PreOrder(root.Right))
+                yield return item; 
+
         }
 
         public IEnumerable<T> InOrder(Node Root)
@@ -49,6 +53,14 @@ namespace DataStructures.BinaryTrees
                 PostOrder(Root.Right);
                 yield return Root.Value;
             }
+        }
+
+        public class Node
+        {
+            public T Value { get; set; }
+            public Node Root { get; set; }
+            public Node Left { get; set; }
+            public Node Right { get; set; }
         }
     }
 }
