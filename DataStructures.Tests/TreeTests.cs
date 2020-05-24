@@ -50,7 +50,7 @@ namespace DataStructures.Tests
 
             // Act
             testTree.Add(5);
-            testTree.Add(8);
+            testTree.Add(9);
             testTree.Add(1);
 
 
