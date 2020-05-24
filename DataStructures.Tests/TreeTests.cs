@@ -18,7 +18,7 @@ namespace DataStructures.Tests
 
 
             // Assert
-            
+
 
         }
 
@@ -59,6 +59,24 @@ namespace DataStructures.Tests
             Assert.Equal(left, testTree.Root.Left.Value);
             Assert.Equal(right, testTree.Root.Right.Value);
 
+        }
+
+        [Fact]
+        public void Can_preorder_traverse()
+        {
+            // Arrange
+            BinaryTree<int> testTree = new BinaryTree<int>();
+            testTree.Add(5);
+            testTree.Add(9);
+            testTree.Add(1);
+            IEnumerable<int> expected = new int[] { 5, 1, 9 }; 
+
+
+            // Act
+           IEnumerable<int> actual = (int[])testTree.PreOrder(testTree.ReturnRoot());
+
+            // Assert
+            Assert.Equal(expected, actual);
         }
     }
 }
