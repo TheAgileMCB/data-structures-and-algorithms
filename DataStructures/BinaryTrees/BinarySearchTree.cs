@@ -4,19 +4,10 @@ using System.Text;
 
 namespace DataStructures.BinaryTrees
 {
-    public class BinarySearchTree<T>  where
+    public class BinarySearchTree<T> : Tree<T> where
         T : IComparable<T>
     {
-        public Node Root;
-        public BinarySearchTree()
-        {
-            Root = null;
-        }
-
-        public Node ReturnRoot()
-        {
-            return Root;
-        }
+ 
         public void Add(T nodeToBeAdded)
         {
             Node newNode = new Node();
@@ -38,7 +29,7 @@ namespace DataStructures.BinaryTrees
                         if (current == null)
                         {
                             parent.Left = newNode;
-                            return;
+                            break;
                         }
                     }
                     else
@@ -47,19 +38,13 @@ namespace DataStructures.BinaryTrees
                         if (current == null)
                         {
                             parent.Right = newNode;
-                            return;
+                            break;
                         }
                     }
                 }
             }
         }
 
-        public class Node
-        {
-            public T Value { get; set; }
-            public Node Root { get; set; }
-            public Node Left { get; set; }
-            public Node Right { get; set; }
-        }
+
     }
 }
