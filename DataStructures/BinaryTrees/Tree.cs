@@ -20,6 +20,7 @@ namespace DataStructures.BinaryTrees
             return Root;
         }
 
+        // Root -> Left -> Right
         public IEnumerable<T> PreOrder(Node root)
         {
             if (root == null)
@@ -35,6 +36,7 @@ namespace DataStructures.BinaryTrees
 
         }
 
+        // Left -> Root -> Right
         public IEnumerable<T> InOrder(Node Root)
         {
             if (Root != null)
@@ -45,6 +47,7 @@ namespace DataStructures.BinaryTrees
             }
         }
 
+        // Left -> Right -> Root
         public IEnumerable<T> PostOrder(Node Root)
         {
             if (Root != null)
