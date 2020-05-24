@@ -99,5 +99,26 @@ namespace DataStructures.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void Can_inorder_big_traverse()
+        {
+            // Arrange
+            BinarySearchTree<int> testTree = new BinarySearchTree<int>();
+            testTree.Add(5);
+            testTree.Add(9);
+            testTree.Add(1);
+            testTree.Add(8);
+            testTree.Add(12);
+            testTree.Add(2);
+            IEnumerable<int> expected = new int[] { 1, 2, 5, 8, 9, 12 };
+
+
+            // Act
+            IEnumerable<int> actual = testTree.InOrder(testTree.ReturnRoot());
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }
