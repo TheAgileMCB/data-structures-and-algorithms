@@ -106,8 +106,8 @@ namespace DataStructures.Tests
             // Arrange
             BinarySearchTree<int> testTree = new BinarySearchTree<int>();
             testTree.Add(5);
-            testTree.Add(7);
             testTree.Add(9);
+            testTree.Add(7);
             testTree.Add(1);
             testTree.Add(12);
             testTree.Add(2);

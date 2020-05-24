@@ -41,12 +41,12 @@ namespace DataStructures.BinaryTrees
                 yield break;
 
             
-            foreach (T item in PreOrder(root.Left))
+            foreach (T item in InOrder(root.Left))
                 yield return item;
 
             yield return root.Value;
 
-            foreach (T item in PreOrder(root.Right))
+            foreach (T item in InOrder(root.Right))
                 yield return item;
         }
 
