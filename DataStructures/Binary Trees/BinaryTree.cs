@@ -6,7 +6,8 @@ using System.Text;
 
 namespace DataStructures.Binary_Trees
 {
-    class BinaryTree<T> where T : IComparable<T>
+    public class BinaryTree<T> where
+        T : IComparable<T>
     {
         public Node Root;
         public BinaryTree()
@@ -19,46 +20,11 @@ namespace DataStructures.Binary_Trees
             return Root;
         }
 
-        public void Insert(T value)
-        {
-            Node newNode = new Node();
-            newNode.Value = value;
-            if (Root == null)
-            {
-                Root = newNode;
-            }
-            else
-            {
-                Node current = Root;
-                Node parent;
-                while (true)
-                {
-                    parent = current;
-                    if (value < current.Value)
-                    {
-                        current = current.Left;
-                        if (current == null)
-                        {
-                            parent.Left = newNode;
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        current = current.Right;
-                        if (current == null)
-                        {
-                            parent.Right = newNode;
-                            return;
-                        }
-                    }
-                }
-            }
-        }
         public IEnumerable<T> PreOrder(Node Root)
         {
             if (Root != null)
             {
+                yield return Root.Value;
                 PreOrder(Root.Left);
                 PreOrder(Root.Right);
             }
@@ -69,9 +35,9 @@ namespace DataStructures.Binary_Trees
             if (Root != null)
             {
                 InOrder(Root.Left);
+                yield return Root.Value;
                 InOrder(Root.Right);
             }
-            return
         }
 
         public IEnumerable<T> PostOrder(Node Root)
@@ -80,16 +46,8 @@ namespace DataStructures.Binary_Trees
             {
                 PostOrder(Root.Left);
                 PostOrder(Root.Right);
+                yield return Root.Value;
             }
-            return
-        }
-
-        public class Node
-        {
-            public T Value { get; set; }
-            public Node Root { get; set; }
-            public Node Left { get; set; }
-            public Node Right { get; set; }
         }
     }
 }
