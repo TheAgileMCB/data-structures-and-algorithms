@@ -27,7 +27,7 @@ namespace DataStructures.Tests
         {
             // Arrange
             BinarySearchTree<int> testTree = new BinarySearchTree<int>();
-            int expected = 7;
+            int expected = 5;
 
 
             // Act
