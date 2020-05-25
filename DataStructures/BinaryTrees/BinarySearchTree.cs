@@ -43,8 +43,11 @@ namespace DataStructures.BinaryTrees
                 }
             }
         }
-
-        public bool Contains(Node root, T key)
+        public bool Contains (T key)
+        {
+            return IfNodeExists(ReturnRoot(), key);
+        }
+        public bool IfNodeExists(Node root, T key)
         {
             if (root == null)
                 return false;
@@ -54,12 +57,12 @@ namespace DataStructures.BinaryTrees
             if ( compare == 0)
                 return true;
 
-            bool result1 = Contains(root.Left, key);
+            bool result1 = IfNodeExists(root.Left, key);
 
-            else if (result1)
+            if (result1)
                 return true;
 
-            bool result2 = Contains(root.Right, key);
+            bool result2 = IfNodeExists(root.Right, key);
 
             
                 return result2;
