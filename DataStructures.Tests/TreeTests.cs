@@ -154,7 +154,7 @@ namespace DataStructures.Tests
             // Act
          
             // Assert
-            Assert.True(testTree.Contains(9));
+            Assert.True(testTree.Contains(1));
         }
     }
 }
