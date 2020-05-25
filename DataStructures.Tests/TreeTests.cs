@@ -141,5 +141,20 @@ namespace DataStructures.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void It_contains()
+        {
+            // Arrange
+            BinarySearchTree<int> testTree = new BinarySearchTree<int>();
+            testTree.Add(5);
+            testTree.Add(7);
+            testTree.Add(9);
+
+            // Act
+         
+            // Assert
+            Assert.True(testTree.Contains(9));
+        }
     }
 }
