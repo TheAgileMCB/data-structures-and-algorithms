@@ -7,7 +7,6 @@ namespace DataStructures.BinaryTrees
     public class BinarySearchTree<T> : Tree<T> where
         T : IComparable<T>
     {
- 
         public void Add(T nodeToBeAdded)
         {
             Node newNode = new Node();
@@ -45,6 +44,26 @@ namespace DataStructures.BinaryTrees
             }
         }
 
+        public bool Contains(Node root, T key)
+        {
+            if (root == null)
+                return false;
+
+            int compare = key.CompareTo(root.Value);
+
+            if ( compare == 0)
+                return true;
+
+            bool result1 = Contains(root.Left, key);
+
+            else if (result1)
+                return true;
+
+            bool result2 = Contains(root.Right, key);
+
+            
+                return result2;
+        }
 
     }
 }
