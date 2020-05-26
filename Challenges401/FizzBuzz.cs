@@ -9,7 +9,7 @@ namespace Challenges
 {
     public class FizzBuzz 
     {
-        public BinarySearchTree<string> FizzBuzzTree(BinarySearchTree<int> tree)
+        public static BinarySearchTree<string> FizzBuzzTree(BinarySearchTree<int> tree)
         {
             int[] treeEnumerable = (int[])tree.PreOrder(tree.ReturnRoot());
             BinarySearchTree<string> stringTree = new BinarySearchTree<string>();
