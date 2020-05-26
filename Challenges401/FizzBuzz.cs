@@ -12,24 +12,25 @@ namespace Challenges
         public BinarySearchTree<string> FizzBuzzTree(BinarySearchTree<int> tree)
         {
             int[] treeEnumerable = (int[])tree.PreOrder(tree.ReturnRoot());
+            BinarySearchTree<string> stringTree = new BinarySearchTree<string>();
+
 
             foreach (var item in treeEnumerable)
             {
                 if (item % 15 == 0)
                 {
-                    treeEnumerable[item].ToString();
-                    treeEnumerable[item] = "FizzBuzz";
+                    stringTree.Add("FizzBuzz");
                 }
                 else if (item % 5 == 0)
                 {
-                    item.ToString();
-                    item = "Buzz";
+                    stringTree.Add("Buzz");
                 }
                 else if (item % 3 == 0)
-                    return "Fizz";
-                else item.ToString();
+                    stringTree.Add("Fizz");
+
+                else stringTree.Add(treeEnumerable[item].ToString());
             }
-                
+            return stringTree;
         }
     }
 }
