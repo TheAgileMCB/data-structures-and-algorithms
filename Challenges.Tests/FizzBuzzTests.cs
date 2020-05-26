@@ -55,26 +55,26 @@ namespace Challenges.Tests
         }
 
         [Fact]
-        public void Can_get_buzz()
+        public void Can_get_number()
         {
             // Arrange
             BinarySearchTree<int> actualTree = new BinarySearchTree<int>();
-            actualTree.Add(15);
-            actualTree.Add(3);
-            actualTree.Add(30);
-            actualTree.Add(45);
-            actualTree.Add(5);
-            actualTree.Add(9);
-            actualTree.Add(10);
-            actualTree.Add(2);
+            actualTree.Add(15); // root
+            actualTree.Add(3);  // left child
+            actualTree.Add(30); // right child
+            actualTree.Add(45); //right right child
+            actualTree.Add(5); // left right child
+            actualTree.Add(9); // left right right child
+            actualTree.Add(10); // left right right right child
+            actualTree.Add(2); // left left child
 
-            string expected = "FizzBuzz";
+            string expected = "2";
 
             // Act
             var actual = FizzBuzz.FizzBuzzTree(actualTree);
 
             // Assert
-            Assert.Equal(expected, actual.Root.Left.Right.Value);
+            Assert.Equal(expected, actual.Root.Left.Left.Value);
         }
     }
 }
