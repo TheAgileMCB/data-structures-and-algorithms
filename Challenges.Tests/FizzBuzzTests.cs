@@ -97,8 +97,8 @@ namespace Challenges.Tests
                 "Fizz",
                 "2",
                 "Buzz",
-                "Fizz",
                 "Buzz",
+                "Fizz",
                 "FizzBuzz",
                 "FizzBuzz"
                 };
