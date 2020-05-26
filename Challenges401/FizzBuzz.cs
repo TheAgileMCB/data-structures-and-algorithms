@@ -11,7 +11,7 @@ namespace Challenges
     {
         public static BinarySearchTree<string> FizzBuzzTree(BinarySearchTree<int> tree)
         {
-            int[] treeEnumerable = (int[])tree.PreOrder(tree.ReturnRoot());
+            IEnumerable<int> treeEnumerable = tree.PreOrder(tree.ReturnRoot());
             BinarySearchTree<string> stringTree = new BinarySearchTree<string>();
 
 
@@ -28,7 +28,7 @@ namespace Challenges
                 else if (item % 3 == 0)
                     stringTree.Add("Fizz");
 
-                else stringTree.Add(treeEnumerable[item].ToString());
+                else stringTree.Add(item.ToString());
             }
             return stringTree;
         }

@@ -25,10 +25,10 @@ namespace Challenges.Tests
             string expected = "fizzbuzz";
 
             // Act
-            FizzBuzzTree(actualTree);
+           var actual = FizzBuzz.FizzBuzzTree(actualTree);
 
             // Assert
-            Assert.Equal(expected, actualTree.Root.Value);
+            Assert.Equal(expected, actual.Root.Value);
         }
     }
 }
