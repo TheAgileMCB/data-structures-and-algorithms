@@ -22,7 +22,7 @@ namespace Challenges.Tests
             actualTree.Add(10);
             actualTree.Add(2);
             
-            string expected = "fizzbuzz";
+            string expected = "FizzBuzz";
 
             // Act
            var actual = FizzBuzz.FizzBuzzTree(actualTree);
