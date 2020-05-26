@@ -21,11 +21,11 @@ namespace Challenges.Tests
             actualTree.Add(9);
             actualTree.Add(10);
             actualTree.Add(2);
-            
+
             string expected = "FizzBuzz";
 
             // Act
-           var actual = FizzBuzz.FizzBuzzTree(actualTree);
+            var actual = FizzBuzz.FizzBuzzTree(actualTree);
 
             // Assert
             Assert.Equal(expected, actual.Root.Value);
@@ -75,6 +75,40 @@ namespace Challenges.Tests
 
             // Assert
             Assert.Equal(expected, actual.Root.Left.Left.Value);
+        }
+
+        [Fact]
+        public void Can_preorder()
+        {
+            // Arrange
+            BinarySearchTree<int> actualTree = new BinarySearchTree<int>();
+            actualTree.Add(15);
+            actualTree.Add(3);
+            actualTree.Add(30);
+            actualTree.Add(45);
+            actualTree.Add(5);
+            actualTree.Add(9);
+            actualTree.Add(10);
+            actualTree.Add(2);
+
+            IEnumerable<string> expected = new string[]
+                {
+                "FizzBuzz",
+                "Fizz",
+                "2",
+                "Buzz",
+                "Fizz",
+                "Buzz",
+                "FizzBuzz",
+                "FizzBuzz"
+                };
+
+            // Act
+            var almostActual = FizzBuzz.FizzBuzzTree(actualTree);
+            IEnumerable<string> actual = almostActual.PreOrder(almostActual.ReturnRoot());
+
+            // Assert
+            Assert.Equal(expected, actual);
         }
     }
 }
