@@ -160,7 +160,7 @@ namespace DataStructures.Tests
             Assert.False(testTree.Contains(1));
         }
 
-        [Fact(Skip = "trying to use the inbuilt method and faltering")]
+        [Fact (Skip = "trying to use the inbuilt method and faltering")]
         public void Can_return_dequeued_value()
         {
             // Arrange
