@@ -188,7 +188,7 @@ namespace DataStructures.Tests
             newTree.Add(25);
             newTree.Add(4);
             newTree.Add(11);
-            int expected = 17;
+            int expected = 25;
 
             // Act
             int actual = newTree.GetMax(newTree.ReturnRoot());
