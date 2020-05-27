@@ -1,8 +1,10 @@
 ﻿using DataStructures.BinaryTrees;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
+using Xunit.Sdk;
 
 namespace DataStructures.Tests
 {
@@ -152,10 +154,24 @@ namespace DataStructures.Tests
             testTree.Add(9);
 
             // Act
-         
+
             // Assert
             Assert.True(testTree.Contains(9));
             Assert.False(testTree.Contains(1));
+        }
+
+        [Fact]
+        public void Can_return_dequeued_value()
+        {
+            // Arrange
+            Queue treeQueue = new Queue();
+            treeQueue.Enqueue(5);
+            int expected = 5;
+
+            // Act
+            int actual = treeQueue.Dequeue().value;
+            // Assert
+            Assert.Equal(expected, actual);
         }
     }
 }
