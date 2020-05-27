@@ -6,11 +6,10 @@ namespace DataStructures.BinaryTrees
 {
     public class GetMaxTree : BinarySearchTree<int>
     {
-        private int MinValue = 0;
         public int GetMax(Node Root)
         {
             if (Root == null)
-                return MinValue;
+                return int.MinValue;
 
             int result = Root.Value;
             int leftResult = GetMax(Root.Left);
