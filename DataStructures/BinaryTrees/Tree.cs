@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using System.Dynamic;
@@ -64,6 +65,30 @@ namespace DataStructures.BinaryTrees
 
             yield return root.Value;
 
+        }
+
+        public IEnumerable<T> BreadthFirst(Node root)
+        {
+            Queue breadth = new Queue();
+            breadth.Enqueue(root);
+
+            while (breadth.Peek() != null)
+            {
+                Node front = (Node)breadth.Dequeue();
+                return front.Value;
+            }
+
+            if (front.Left != null)
+            {
+                breadth.Enqueue(front.Left);
+            }
+
+            if (front.Right != null)
+            {
+                breadth.Enqueue(front.Right);
+            }
+
+            return null;
         }
 
         public class Node
