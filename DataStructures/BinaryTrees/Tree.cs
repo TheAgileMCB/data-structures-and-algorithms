@@ -11,6 +11,7 @@ namespace DataStructures.BinaryTrees
         T : IComparable<T>
     {
         public Node Root;
+
         public Tree()
         {
             Root = null;
@@ -67,29 +68,29 @@ namespace DataStructures.BinaryTrees
 
         }
 
-        public IEnumerable<T> BreadthFirst(Node root)
-        {
-            Queue breadth = new Queue();
-            breadth.Enqueue(root);
+        //public IEnumerable<T> BreadthFirst(Node root)
+        //{
+        //    Queue breadth = new Queue();
+        //    breadth.Enqueue(root);
 
-            while (breadth.Peek() != null)
-            {
-                Node front = (Node)breadth.Dequeue();
-                return front.Value;
-            }
+        //    while (breadth.Peek() != null)
+        //    {
+        //        Node front = (Node)breadth.Dequeue();
+        //        return front.Value;
+        //    }
 
-            if (front.Left != null)
-            {
-                breadth.Enqueue(front.Left);
-            }
+        //    if (front.Left != null)
+        //    {
+        //        breadth.Enqueue(front.Left);
+        //    }
 
-            if (front.Right != null)
-            {
-                breadth.Enqueue(front.Right);
-            }
+        //    if (front.Right != null)
+        //    {
+        //        breadth.Enqueue(front.Right);
+        //    }
 
-            return null;
-        }
+        //    return null;
+        //}
 
         public class Node
         {

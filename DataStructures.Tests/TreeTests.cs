@@ -161,25 +161,25 @@ namespace DataStructures.Tests
             Assert.False(testTree.Contains(1));
         }
 
-        [Fact (Skip = "trying to use the inbuilt method and faltering")]
-        public void Can_return_dequeued_value()
-        {
-            // Arrange
-            Queue treeQueue = new Queue();
-            treeQueue.Enqueue(5);
-            int expected = 5;
+        //[Fact (Skip = "trying to use the inbuilt method and faltering")]
+        //public void Can_return_dequeued_value()
+        //{
+        //    // Arrange
+        //    Queue treeQueue = new Queue();
+        //    treeQueue.Enqueue(5);
+        //    int expected = 5;
 
-            // Act
-            int actual = treeQueue.Dequeue().value;
-            // Assert
-            Assert.Equal(expected, actual);
-        }
+        //    // Act
+        //    int actual = treeQueue.Dequeue().Value;
+        //    // Assert
+        //    Assert.Equal(expected, actual);
+        //}
 
         [Fact]
         public void Can_find_max()
         {
             // Arrange
-            BinarySearchTree<int> newTree = new BinarySearchTree<int>();
+            GetMaxTree newTree = new GetMaxTree();
                 newTree.Add(5);
             newTree.Add(8);
             newTree.Add(1);
@@ -188,10 +188,10 @@ namespace DataStructures.Tests
             newTree.Add(25);
             newTree.Add(4);
             newTree.Add(11);
-            int expected = 25;
+            int expected = 17;
 
             // Act
-            int actual = newTree.GetMax();
+            int actual = newTree.GetMax(newTree.ReturnRoot());
 
             // Assert
             Assert.Equal(expected, actual);
