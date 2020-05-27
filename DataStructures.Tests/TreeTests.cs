@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Text;
 using Xunit;
 using Xunit.Sdk;
@@ -170,6 +171,28 @@ namespace DataStructures.Tests
 
             // Act
             int actual = treeQueue.Dequeue().value;
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Can_find_max()
+        {
+            // Arrange
+            BinarySearchTree<int> newTree = new BinarySearchTree<int>();
+                newTree.Add(5);
+            newTree.Add(8);
+            newTree.Add(1);
+            newTree.Add(17);
+            newTree.Add(9);
+            newTree.Add(25);
+            newTree.Add(4);
+            newTree.Add(11);
+            int expected = 25;
+
+            // Act
+            int actual = newTree.GetMax();
+
             // Assert
             Assert.Equal(expected, actual);
         }
