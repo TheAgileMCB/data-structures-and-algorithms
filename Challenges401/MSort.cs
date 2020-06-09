@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Challenges
 {
-    class MSort
+    public class MSort
     {
         public static int[] MergeSort(int[] inputArray)
         {
