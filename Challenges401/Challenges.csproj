@@ -15,4 +15,8 @@
     <ProjectReference Include="..\DataStructures\DataStructures.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="blogs\" />
+  </ItemGroup>
+
 </Project>
