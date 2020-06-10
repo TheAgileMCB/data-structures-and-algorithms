@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xunit;
 
@@ -16,12 +17,14 @@ namespace Challenges.Tests
         public void Can_sort(int[] input, int[] expected)
         {
             // Arrange (Theory)
+            List<int> listInput = input.ToList();
+          
 
             // Act
-            int[] actual = Challenges.MSort.MergeSort(input);
+            List<int> actual = Challenges.MSort.MergeSort(listInput);
 
             // Assert
-            Assert.Equal(actual, expected);
+            Assert.Equal(actual.ToArray(), expected);
         }
     }
 }
