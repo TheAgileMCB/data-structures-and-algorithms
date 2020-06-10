@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Text;
 using Xunit;
 using Xunit.Sdk;
@@ -160,16 +161,38 @@ namespace DataStructures.Tests
             Assert.False(testTree.Contains(1));
         }
 
-        [Fact(Skip = "trying to use the inbuilt method and faltering")]
-        public void Can_return_dequeued_value()
+        //[Fact (Skip = "trying to use the inbuilt method and faltering")]
+        //public void Can_return_dequeued_value()
+        //{
+        //    // Arrange
+        //    Queue treeQueue = new Queue();
+        //    treeQueue.Enqueue(5);
+        //    int expected = 5;
+
+        //    // Act
+        //    int actual = treeQueue.Dequeue().Value;
+        //    // Assert
+        //    Assert.Equal(expected, actual);
+        //}
+
+        [Fact]
+        public void Can_find_max()
         {
             // Arrange
-            Queue treeQueue = new Queue();
-            treeQueue.Enqueue(5);
-            int expected = 5;
+            GetMaxTree newTree = new GetMaxTree();
+                newTree.Add(5);
+            newTree.Add(8);
+            newTree.Add(1);
+            newTree.Add(17);
+            newTree.Add(9);
+            newTree.Add(25);
+            newTree.Add(4);
+            newTree.Add(11);
+            int expected = 25;
 
             // Act
-            int actual = treeQueue.Dequeue().value;
+            int actual = newTree.GetMax(newTree.ReturnRoot());
+
             // Assert
             Assert.Equal(expected, actual);
         }
