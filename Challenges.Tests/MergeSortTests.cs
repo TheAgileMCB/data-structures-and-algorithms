@@ -24,7 +24,7 @@ namespace Challenges.Tests
             List<int> actual = Challenges.MSort.MergeSort(listInput);
 
             // Assert
-            Assert.Equal(actual.ToArray(), expected);
+            Assert.Equal(expected, actual.ToArray());
         }
     }
 }
