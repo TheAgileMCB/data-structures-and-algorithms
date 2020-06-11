@@ -9,55 +9,47 @@ namespace Challenges
 {
     public class QSort
     {
-        static public int[] QuickSort(int[] inputArray)
+        public static int[] QuickSort(int[] inputArray)
         {
             return QuickSort(inputArray, 0, inputArray.Length - 1);
         }
 
-        static private int[] QuickSort(int[] inputArray, int left, int right)
+        private static int[] QuickSort(int[] inputArray, int left, int right)
         {
             if (left < right)
             {
                 int pivot = partition(inputArray, left, right);
 
-                if (pivot > 1)
-                {
                     QuickSort(inputArray, left, pivot - 1);
-                }
-
-                if (pivot + 1 < right)
-                {
+    
                     QuickSort(inputArray, pivot + 1, right);
-                }
             }
 
             return inputArray;
-
         }
-
 
         private static int partition(int[] inputArray, int left, int right)
         {
             int pivot = inputArray[right];
-            int i = left - 1;
+            int low = left - 1;
 
-            for (int j = left; j < right - 1; j++)
+            for (int i = left; i < right; i++)
             {
-                if (inputArray[j] <= pivot)
+                if (inputArray[i] < pivot)
                 {
-                    i++;
-                    swap(inputArray, i, j);
+                    low++;
+                    swap(inputArray, low, i);
                 }
             }
-            swap(inputArray, i + 1, right);
-            return i + 1;
+            swap(inputArray, low + 1, right);
+            return low + 1;
         }
 
-        private static void swap(int[] arr, int i, int high)
+        private static void swap(int[] arr, int i, int low)
         {
             var temp = arr[i];
-            arr[i] = arr[high];
-            arr[high] = temp;
+            arr[i] = arr[low];
+            arr[low] = temp;
         }
     }
 }
