@@ -18,7 +18,7 @@ namespace Challenges
         {
             if (left < right)
             {
-                int pivot = Partition(inputArray, left, right);
+                int pivot = partition(inputArray, left, right);
 
                 if (pivot > 1)
                 {
@@ -32,40 +32,33 @@ namespace Challenges
             }
 
             return inputArray;
-          
+
         }
 
 
-        private static int Partition(int[] inputArray, int left, int right)
+        private static int partition(int[] inputArray, int left, int right)
         {
-            int pivot = inputArray[left];
-            while (true)
+            int pivot = inputArray[right];
+            int i = left - 1;
+
+            for (int j = left; j < right - 1; j++)
             {
-                while (inputArray[left] < pivot)
+                if (inputArray[j] <= pivot)
                 {
-                    left++;
-                }
-                while (inputArray[right] > pivot)
-                {
-                    right--;
-                }
-
-                if (left < right)
-                {
-                    if (inputArray[left] == inputArray[right])
-                    {
-                        return right;
-                    }
-
-                    int temp = inputArray[left];
-                    inputArray[left] = inputArray[right];
-                    inputArray[right] = temp;
-                }
-                else
-                {
-                    return right;
+                    i++;
+                    swap(inputArray, i, j);
                 }
             }
+            swap(inputArray, i + 1, right);
+            return i + 1;
+        }
+
+        private static void swap(int[] arr, int i, int high)
+        {
+            var temp = arr[i];
+            arr[i] = arr[high];
+            arr[high] = temp;
         }
     }
 }
+
