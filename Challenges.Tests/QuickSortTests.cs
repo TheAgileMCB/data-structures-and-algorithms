@@ -13,6 +13,8 @@ namespace Challenges.Tests
         [InlineData(new int[] { 5, 12, 7, 5, 5, 7 }, new int[] { 5, 5, 5, 7, 7, 12 })]
         [InlineData(new int[] { 2, 3, 5, 7, 13, 11 }, new int[] { 2, 3, 5, 7, 11, 13 })]
         [InlineData(new int[] { }, new int[] { })]
+        [InlineData(new int[] { 1, 2, 3, 9, 5, 6 }, new int[] { 1, 2, 3, 5, 6, 9 })]
+
         public void Can_sort(int[] input, int[] expected)
         {
             // Arrange (Theory)
