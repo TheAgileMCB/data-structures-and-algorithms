@@ -35,7 +35,7 @@ namespace Challenges
 
             for (int i = left; i < right; i++)
             {
-                if (inputArray[i] < pivot)
+                if (inputArray[i] <= pivot)
                 {
                     low++;
                     swap(inputArray, low, i);
