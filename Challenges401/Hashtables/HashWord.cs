@@ -10,7 +10,7 @@ namespace Challenges.Hashtables
     {
         public static string RepeatedWord(string longString)
         {
-            var rx = new Regex(@"\s+", RegexOptions.Compiled);
+            var rx = new Regex(@"\s+|,\s+", RegexOptions.Compiled);
             string lowerString = longString.ToLower();
             string[] stringArr = rx.Split(lowerString);
 
