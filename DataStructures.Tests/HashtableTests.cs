@@ -36,5 +36,21 @@ namespace DataStructures.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void can_find_lower_level_element()
+        {
+            // Arrange
+            Hashtable testTable = new Hashtable(1);
+            testTable.Add("noodles", "spaghetti");
+            testTable.Add("bread", "baguette");
+            string expected = "baguette";
+
+            // Act
+            string actual = testTable.Get("bread");
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }
