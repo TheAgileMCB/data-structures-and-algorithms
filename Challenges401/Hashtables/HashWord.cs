@@ -9,23 +9,23 @@ namespace Challenges.Hashtables
     {
         public static string RepeatedWord(string longString)
         {
-            char[] splitters = new char[] {' ', ',', '/'};
-            string[] stringArr = longString.Split(splitters);
+            char[] splitters = new char[] {' ', ', ', '/'};
+            string[] stringArr = longString.ToLower().Split(splitters);
 
             Hashtable stringHash = new Hashtable(stringArr.Length);
-            foreach (string item in stringArr)
-            {
-                stringHash.Add(item, item);
-            }
-                for (int i = 0; i > stringArr.Length; i++)
+            //foreach (string item in stringArr)
+            //{
+            //    stringHash.Add(item, item);
+            //}
+                for (int i = 0; i < stringArr.Length; i++)
                 {
-                    stringHash.Get(stringArr[i]);
+                    //stringHash.Get(stringArr[i]);
                     if (stringHash.Contains(stringArr[i]))
                         return stringArr[i];
 
-                    continue;
+                    stringHash.Add(stringArr[i], stringArr[i]);
                 }
-            return stringArr[0];
+            return "There are no repeated words!";
         }
     }
 }
