@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Challenges.Hashtables
 {
@@ -9,8 +10,9 @@ namespace Challenges.Hashtables
     {
         public static string RepeatedWord(string longString)
         {
-            char[] splitters = new char[] {' ', ', ', '/'};
-            string[] stringArr = longString.ToLower().Split(splitters);
+            var rx = new Regex(@"\s+", RegexOptions.Compiled);
+            string lowerString = longString.ToLower();
+            string[] stringArr = rx.Split(lowerString);
 
             Hashtable stringHash = new Hashtable(stringArr.Length);
             //foreach (string item in stringArr)
