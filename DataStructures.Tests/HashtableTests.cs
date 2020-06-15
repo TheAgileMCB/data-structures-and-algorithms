@@ -3,7 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
-
+/// <summary>
+/// Edge Cases
+/// 1. Key doesn't exist *and* bucket is empty
+/// 2. Key doesn't exist *but* bucket is not empty
+///  2a. Hash code matches, but not equal
+///  "cat" vs "act"
+///  2b. Hash code doesn't match
+/// 3. Key does exist and we need to *replace* the existing value
+/// </summary>
 namespace DataStructures.Tests
 {
     public class HashtableTests
