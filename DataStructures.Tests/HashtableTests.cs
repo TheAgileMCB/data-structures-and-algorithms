@@ -17,8 +17,24 @@ namespace DataStructures.Tests
             // Act
             testTable.Add("noodles", "spaghetti");
 
-        // Assert
+            // Assert
             Assert.True(testTable.Contains("noodles"));
+        }
+
+        [Fact]
+        public void can_find_first_level_element()
+        {
+            // Arrange
+            Hashtable testTable = new Hashtable(1);
+            testTable.Add("noodles", "spaghetti");
+            testTable.Add("bread", "baguette");
+            string expected = "noodles";
+
+            // Act
+            string actual = testTable.Get("noodles");
+
+            // Assert
+            Assert.Equal(expected, actual);
         }
     }
 }
