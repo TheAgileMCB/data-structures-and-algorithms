@@ -13,20 +13,19 @@ namespace Challenges.Hashtables
             string[] stringArr = longString.Split(splitters);
 
             Hashtable stringHash = new Hashtable(stringArr.Length);
-            for(int i=0; i < stringArr.Length; i++)
+            foreach (string item in stringArr)
             {
-                stringHash.Add(stringArr[i], stringArr[i]);
-                while (!stringHash.Contains(stringArr[i]))
+                stringHash.Add(item, item);
+            }
+                for (int i = 0; i > stringArr.Length; i++)
                 {
-                    stringHash.Add(stringArr[i], stringArr[i]);
+                    stringHash.Get(stringArr[i]);
                     if (stringHash.Contains(stringArr[i]))
                         return stringArr[i];
 
                     continue;
                 }
-            }
-
-            return null;
+            return stringArr[0];
         }
     }
 }
