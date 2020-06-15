@@ -12,10 +12,10 @@ namespace DataStructures.Tests
         public void Can_has_element()
         {
             // Arrange
-            Hashtable testTable = new Hashtable();
+            Hashtable testTable = new Hashtable(1);
 
             // Act
-            testTable.Add("noodles", "spaghetti")
+            testTable.Add("noodles", "spaghetti");
 
         // Assert
             Assert.True(testTable.Contains("noodles"));
