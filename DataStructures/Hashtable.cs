@@ -23,15 +23,15 @@ namespace DataStructures.Hashtables
 
         public int Hash(string key)
         {
-            int index;
+            int bucketIndex;
             byte[] bytesTotal = Encoding.ASCII.GetBytes(key);
             int asciiKey = 0;
             for (int i = 0; i < bytesTotal.Length; i++)
             {
                 asciiKey += bytesTotal[i];
             }
-            index = asciiKey * 701 % Buckets;
-            return index;
+            bucketIndex = asciiKey * 701;
+            return bucketIndex;
         }
 
         public Node[] HashTableNode { get; set; }
@@ -44,17 +44,17 @@ namespace DataStructures.Hashtables
 
         public void Add(string key, string value)
         {
-            int index = Hash(key);
+            int bucketIndex = Hash(key) % Buckets;
             Node newNode = new Node(key, value);
 
-            if (HashTableNode[index] == null)
+            if (HashTableNode[bucketIndex] == null)
             {
-                HashTableNode[index] = newNode;
+                HashTableNode[bucketIndex] = newNode;
             }
             else
             {
                 //Node newNode = new Node(key, value);
-                Node current = HashTableNode[index];
+                Node current = HashTableNode[bucketIndex];
                 while (current.Next != null)
                 {
                     current = current.Next;
@@ -66,22 +66,22 @@ namespace DataStructures.Hashtables
         public string Get(string key)
         {
             string returnText = $"Cannot find key: {key}";
-            int index = Hash(key);
+            int bucketIndex = Hash(key) % Buckets;
 
-            if (HashTableNode[index] == null)
+            if (HashTableNode[bucketIndex] == null)
             {
                 return returnText;
             }
 
-            if (HashTableNode[index] != null)
+            if (HashTableNode[bucketIndex] != null)
             {
-                if (HashTableNode[index].Key == key)
+                if (HashTableNode[bucketIndex].Key == key)
                 {
-                    return HashTableNode[index].Value;
+                    return HashTableNode[bucketIndex].Value;
                 }
                 else
                 {
-                    Node current = HashTableNode[index];
+                    Node current = HashTableNode[bucketIndex];
                     while (current.Next != null)
                     {
                         current = current.Next;
@@ -98,15 +98,15 @@ namespace DataStructures.Hashtables
 
         public bool Contains(string key)
         {
-            int index = Hash(key);
-            if (HashTableNode[index] == null)
+            int bucketIndex = Hash(key) % Buckets;
+            if (HashTableNode[bucketIndex] == null)
             {
                 return false;
             }
             else
             {
-                Node current = HashTableNode[index];
-                if (HashTableNode[index].Key == key)
+                Node current = HashTableNode[bucketIndex];
+                if (HashTableNode[bucketIndex].Key == key)
                     return true;
                 while (current.Next != null)
                 {
