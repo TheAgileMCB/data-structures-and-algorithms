@@ -45,14 +45,15 @@ namespace DataStructures.Hashtables
         public void Add(string key, string value)
         {
             int index = Hash(key);
+            Node newNode = new Node(key, value);
+
             if (HashTableNode[index] == null)
             {
-                Node newNode = new Node(key, value);
                 HashTableNode[index] = newNode;
             }
             else
             {
-                Node newNode = new Node(key, value);
+                //Node newNode = new Node(key, value);
                 Node current = HashTableNode[index];
                 while (current.Next != null)
                 {
