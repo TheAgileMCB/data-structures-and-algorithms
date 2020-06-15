@@ -18,7 +18,7 @@ namespace DataStructures.Tests
             testTable.Add("noodles", "spaghetti");
 
         // Assert
-            Assert.True(testTable.Contains("noodles"));
+            Assert.True(testTable.Contains("spaghetti"));
         }
     }
 }
