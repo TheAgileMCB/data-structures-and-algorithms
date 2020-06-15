@@ -28,7 +28,7 @@ namespace DataStructures.Tests
             Hashtable testTable = new Hashtable(1);
             testTable.Add("noodles", "spaghetti");
             testTable.Add("bread", "baguette");
-            string expected = "noodles";
+            string expected = "spaghetti";
 
             // Act
             string actual = testTable.Get("noodles");
