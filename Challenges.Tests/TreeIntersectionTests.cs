@@ -32,7 +32,7 @@ namespace Challenges.Tests
             }
 
             //Act
-            string[] actual = Hashtables.TreeIntersection.Tree_Intersection(treeOne, treeTwo);
+            List<string> actual = Hashtables.TreeIntersection.Tree_Intersection(treeOne, treeTwo);
 
             //Assert
             Assert.Equal(expected, actual);
