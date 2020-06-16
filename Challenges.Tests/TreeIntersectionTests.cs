@@ -28,7 +28,7 @@ namespace Challenges.Tests
 
             for (int i = 0; i < arrTwo.Length; i++)
             {
-                treeTwo.Add(arrOne[i]);
+                treeTwo.Add(arrTwo[i]);
             }
 
             //Act
