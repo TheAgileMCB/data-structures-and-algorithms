@@ -25,7 +25,7 @@ namespace DataStructures.Tests
         public void Can_get_all_nodes()
         {
             // Arrange
-            List<int> expected = new List<int> { 1, 1, 4, 7, 3, 2, 9, 122, 45, 56 };
+            List<int> expected = new List<int> { 1, 4, 7, 3, 2, 9, 122, 45, 56 };
             Graph<int> testGraph = new Graph<int>();
 
             // Act
