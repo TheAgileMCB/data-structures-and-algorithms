@@ -44,7 +44,7 @@ namespace DataStructures
 
         public List<T> GetNodes()
         {
-            if (Nodes.Keys.Count < 1) return null;
+            //if (Nodes.Keys.Count < 1) return null;
             return Nodes.Keys.ToList();
         }
 
