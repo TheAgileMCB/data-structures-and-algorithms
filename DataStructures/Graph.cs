@@ -60,7 +60,7 @@ namespace DataStructures
             return Nodes.Keys.Count;
         }
 
-        public HashSet<T> DFS<T>(Graph<T> graph, T start)
+        public HashSet<T> DFT<T>(Graph<T> graph, T start)
         {
             var visited = new HashSet<T>();
 
